@@ -1,0 +1,99 @@
+{
+    "experiences":[
+        {
+            "company":"International Business Machines",
+            "companyShortName":"IBM",
+            "title":"Software Engineering Co-op",
+            "startDate":"May 2022",
+            "endDate":"Present",
+            "location":"Coppell, TX",
+            "teamDescription":"Client Engineering - Industry Engineering Lab (Telecommunications Media Entertainment Market ) @ IBM Global Solutions Center in Coppell, TX.",
+            "highLevelDescription":"Developed a web application that allows users to search for and view information about IBM employees. The application is built using React, Redux, and Node.js. The application is deployed on IBM Cloud using Docker.",
+            "description":["Demonstrate the value of TME solutions in areas such as 5G, AI/ML, Edge Computing and Hybrid Cloud via technology demonstrations (both on-site and remote), workshops, proof-of-concepts, trial deployments, innovation symposia",
+            "Work closely with team members and clients to generate high quality demo ready technical sales assets for the progression or close of solution sales opportunities",
+            "Design and develop full stack in-house websites, utilizing modern web-development tools & frameworks i.e React.js, TypeScript, SCSS, Next.JS, Node.js",
+            "Work extensively with IBM ML/AI Software (MVI/MVIE/OpenScale/Watson Machine Learning) to create demo ready solutions",
+            "Create, deploy and manage containerized applications using Podman, Docker, Rancher"],
+            "skills":[
+                "TypeScript",
+                "JavaScript",
+                "HTML",
+                "CSS",
+                "Node.js",
+                "Express",
+                "Postgres",
+                "React",
+                "OpenShift",
+                "Git",
+                "IBM Cloud",
+                "OpenScale",
+                "Kubernetes",
+                "Docker",
+                "Podman",
+                "Maximo Visual Inspection Edge",
+                "Python"
+            ]
+        },
+        {
+            "company":"BlockTrace",
+            "companyShortName":"N/A",
+            "title":"Software Engineering Contractor",
+            "startDate":"Dec 2021",
+            "endDate":"Aug 2022",
+            "location":"Remote",
+            "teamDescription":"Client Engineering - Industry Engineering Lab (Telecommunications Media Entertainment Market ) @ IBM Global Solutions Center in Coppell, TX.",
+            "highLevelDescription":"Developed a web application that allows users to search for and view information about IBM employees. The application is built using React, Redux, and Node.js. The application is deployed on IBM Cloud using Docker.",
+            "description":["Demonstrate the value of TME solutions in areas such as 5G, AI/ML, Edge Computing and Hybrid Cloud via technology demonstrations (both on-site and remote), workshops, proof-of-concepts, trial deployments, innovation symposia",
+            "Work closely with team members and clients to generate high quality demo ready technical sales assets for the progression or close of solution sales opportunities",
+            "Design and develop full stack in-house websites, utilizing modern web-development tools & frameworks i.e React.js, TypeScript, SCSS, Next.JS, Node.js",
+            "Work extensively with IBM ML/AI Software (MVI/MVIE/OpenScale/Watson Machine Learning) to create demo ready solutions",
+            "Create, deploy and manage containerized applications using Podman, Docker, Rancher"],
+            "skills":[
+                "Java",
+                "C++",
+                "Python"
+            ]
+        },
+        {
+            "company":"BlockTrace",
+            "companyShortName":"N/A",
+            "title":"Software Engineering Intern",
+            "startDate":"2015-01",
+            "endDate":"2015-01",
+            "location":"Remote",
+            "teamDescription":"Client Engineering - Industry Engineering Lab (Telecommunications Media Entertainment Market ) @ IBM Global Solutions Center in Coppell, TX.",
+            "highLevelDescription":"Developed a web application that allows users to search for and view information about IBM employees. The application is built using React, Redux, and Node.js. The application is deployed on IBM Cloud using Docker.",
+            "description":["Demonstrate the value of TME solutions in areas such as 5G, AI/ML, Edge Computing and Hybrid Cloud via technology demonstrations (both on-site and remote), workshops, proof-of-concepts, trial deployments, innovation symposia",
+            "Work closely with team members and clients to generate high quality demo ready technical sales assets for the progression or close of solution sales opportunities",
+            "Design and develop full stack in-house websites, utilizing modern web-development tools & frameworks i.e React.js, TypeScript, SCSS, Next.JS, Node.js",
+            "Work extensively with IBM ML/AI Software (MVI/MVIE/OpenScale/Watson Machine Learning) to create demo ready solutions",
+            "Create, deploy and manage containerized applications using Podman, Docker, Rancher"],
+            "skills":[
+                "Java",
+                "C++",
+                "Python"
+            ]
+        },
+        {
+            "company":"Dell",
+            "companyShortName":"N/A",
+            "title":"Software Engineer Apprentice",
+            "startDate":"2015-01",
+            "endDate":"2015-01",
+            "location":"Round Rock, TX",
+            "teamDescription":"Client Engineering - Industry Engineering Lab (Telecommunications Media Entertainment Market ) @ IBM Global Solutions Center in Coppell, TX.",
+            "highLevelDescription":"Developed a web application that allows users to search for and view information about IBM employees. The application is built using React, Redux, and Node.js. The application is deployed on IBM Cloud using Docker.",
+            "description":["Demonstrate the value of TME solutions in areas such as 5G, AI/ML, Edge Computing and Hybrid Cloud via technology demonstrations (both on-site and remote), workshops, proof-of-concepts, trial deployments, innovation symposia",
+            "Work closely with team members and clients to generate high quality demo ready technical sales assets for the progression or close of solution sales opportunities",
+            "Design and develop full stack in-house websites, utilizing modern web-development tools & frameworks i.e React.js, TypeScript, SCSS, Next.JS, Node.js",
+            "Work extensively with IBM ML/AI Software (MVI/MVIE/OpenScale/Watson Machine Learning) to create demo ready solutions",
+            "Create, deploy and manage containerized applications using Podman, Docker, Rancher"],
+            "skills":[
+                "Java",
+                "C++",
+                "Python"
+            ]
+        }
+    ]
+        
+}

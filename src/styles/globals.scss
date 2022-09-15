@@ -1,0 +1,159 @@
+@import "~antd/dist/antd.css";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: #e2ded7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.HeaderMain {
+  border: 1px solid rgb(235, 237, 240);
+  width: 100vw;
+  height: 70px;
+}
+
+.mainLayout {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+.mainHeader {
+  background-color: white;
+}
+
+.card-about {
+  background: #e2ded7;
+  margin: 15px;
+  width: 50vw;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.experiences-menu {
+  margin: 5px;
+  padding: 10px;
+  float: "left";
+  color: black;
+  width: "10px";
+}
+
+.skeleton-NFTs {
+  width: 512px;
+  height: 512px;
+}
+
+.card-directory {
+  background: #e2ded7;
+  margin: 15px;
+  height: 21vh;
+  width: 14vw;
+  border-radius: 10px;
+  text-align: left;
+  outline: none;
+}
+
+.card-directory:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0 0);
+}
+
+.card-contact {
+  background: #e2ded7;
+  margin: 15px;
+  height: 21vh;
+  width: fit-content;
+  border-radius: 10px;
+  outline: none;
+}
+
+.card-contact:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0 0);
+}
+
+.card-skill {
+  background: #e2ded7;
+  margin: 15px;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 10px;
+  outline: none;
+}
+
+.card-skill:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0 0);
+}
+
+.card-project {
+  background: #e2ded7;
+  margin: 15px;
+  min-width: none;
+  height: 200px;
+  width: 20;
+  border-radius: 10px;
+  outline: none;
+}
+
+.card-project:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0 0);
+}
+
+
+
+
+.experience-Tile {
+  background: #e2ded7;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  outline: none;
+  font-size: xxx-large;
+}
+
+.normal-Tile {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 10px;
+}
+
+.checkable-tag {
+  background-color: gray;
+  color: #e2ded7;
+
+}
+
+.date-tag {
+  background-color: gray;
+  color: #e2ded7;
+  border-radius: 20px;
+  width: 70px;
+  text-align: center;
+
+}
+
+.description-card {
+  background-color: gray;
+  color: #e2ded7;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.normal-tag {
+  background-color: gray;
+  color: #e2ded7;
+}

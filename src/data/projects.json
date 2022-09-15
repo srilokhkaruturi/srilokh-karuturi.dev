@@ -1,0 +1,37 @@
+{
+	"Sections": [{
+				"Name":"Featured",
+				"Projects": [
+					{
+						"Name":"UTD Building Identifier",
+						"DescriptionShort":"Create an IOS Application that allows UTD students to identify all buildings on campus",
+						"DescriptionLong":"Nothing",
+						"Skills":["Python"],
+						"URLS": {
+							"DemoURL":"google.com",
+							"VideoURL":"google.com",
+							"ImageURL":"google.com",
+							"GithubURL":"google.com",
+							"DevPostURL":"google.com"
+						}
+					},
+					{
+						"Name":"UTD Food Allergen Identifier",
+						"DescriptionShort":"Nothing",
+						"DescriptionLong":"Nothing",
+						"Skills":["Python"],
+						"URLS": {
+							"DemoURL":"google.com",
+							"VideoURL":"google.com",
+							"ImageURL":"google.com",
+							"GithubURL":"google.com",
+							"DevPostURL":"google.com"
+						}
+					}
+				]
+			},
+			{
+				"Name":"Full Stack",
+				"Projects":[]
+			}]
+}
