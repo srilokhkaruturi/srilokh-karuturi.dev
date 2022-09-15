@@ -11,7 +11,6 @@ const { TabPane } = Tabs
 const { Title, Text } = Typography
 
 type experience = {
-    companyLogo: any;
     companyShortName: string;
     company: string,
     title: string,
@@ -82,7 +81,7 @@ const Experiences: NextPage = () => {
                                             <Descriptions className={"experience-description"}>
 
                                                 <DescriptionsItem>
-                                                    <Space direction="horizontal" wrap size={12}>
+                                                    <Space direction="vertical" wrap size={12}>
 
                                                         {experience.description.map((description, index) => (
                                                             <Badge status="default" color={"gray"} key={index} text={description} />
