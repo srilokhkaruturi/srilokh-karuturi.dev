@@ -47,10 +47,10 @@ const Projects: NextPage = () => {
             (section: Section, sectionIndex: number) => {
               return (
                 <Panel header={<Title level={4}> {section.Name}</Title>} key={sectionIndex}>
-                  <Row gutter={[16, 16]}>
+                  <Row gutter={[16, 16]} key={sectionIndex}>
                     {section.Projects.map((project: Project, projectIndex: number) => {
                       return (
-                        <Col span={"12"}>
+                        <Col span={"12"} key={projectIndex}>
                           <Card
                             className='card-project'
                             hoverable
@@ -58,7 +58,7 @@ const Projects: NextPage = () => {
                             key={projectIndex}
                             extra={<a onClick={() => setIsModalVisible(true)}> <ExpandOutlined style={{ "fontSize": "25px" }} /> </a>}
                           >
-                            <Space direction="vertical">
+                            <Space direction="vertical" >
                               {project.DescriptionShort}
                               <Space wrap>
                                 {project.Skills.map((skill: String, skillIndex: number) => { return <Tag className={"normal-tag"} key={skillIndex}>{skill}</Tag> })}
@@ -83,13 +83,13 @@ const Projects: NextPage = () => {
         }
       </Collapse>
 
-      <Modal 
-        visible={isModalVisible} 
-        onCancel={() => setIsModalVisible(false)} 
-        
+      <Modal
+        visible={isModalVisible}
+        onCancel={() => setIsModalVisible(false)}
+
       >
 
-        
+
 
 
       </Modal>

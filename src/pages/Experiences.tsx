@@ -41,7 +41,7 @@ const Experiences: NextPage = () => {
 
                         <TabPane tab={<Title level={3}>{experience.companyShortName === "N/A" ? experience.company : experience.companyShortName}</Title>} key={index}>
                             <div className="experience">
-                                <Badge.Ribbon text="Present" color="gray">
+                                <Badge.Ribbon text={experience.endDate === "Present" ? "Present" : "Ended"} color={"gray"}>
                                     <Card className="experience-Tile">
 
                                         <Descriptions labelStyle={{ "fontWeight": "bold" }} className={"experience-description"} title={experience.company + " - " + experience.title} >

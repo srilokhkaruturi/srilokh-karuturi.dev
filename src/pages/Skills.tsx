@@ -9,7 +9,7 @@ const Skills: NextPage = () => {
   return (
     <Space size={1} wrap>
       {data.map((skill: string, index: number) => (
-        <Row align="middle" justify='center' typeof='flex'>
+        <Row align="middle" justify='center' typeof='flex' key={index}>
           <Card className="card-skill" key={index}>
             <Title level={3} key={index}>{skill}</Title>
           </Card>

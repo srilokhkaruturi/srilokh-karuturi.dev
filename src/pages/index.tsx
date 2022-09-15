@@ -15,56 +15,52 @@ import Head from 'next/head';
 const { Header, Footer, Sider, Content } = Layout;
 const { Title, Text } = Typography;
 const Home: NextPage = () => {
-
-
-
   const [tab, setTab] = useState('About');
 
   const onChangeTab = (key: string) => {
     if (key == "About") {
       setTab(key);
-      setContent(<About onChangeTab={onChangeTab} />)
+      setContent(<About key={""} onChangeTab={onChangeTab} />)
     }
     if (key == "Resume") {
       setTab(key);
 
       message.info("Resume");
-      setContent(<Resume />)
+      setContent(<Resume key={""} />)
     }
     if (key == "Projects") {
       setTab(key);
 
       message.info("Projects");
-      setContent(<Projects />)
+      setContent(<Projects key={""} />)
     }
     if (key == "Skills") {
       setTab(key);
-
-      setContent(<Skills />)
+      setContent(<Skills key={""} />)
     }
     if (key == "Contact") {
       setTab(key);
 
       message.info("Contact info");
 
-      setContent(<Contact />)
+      setContent(<Contact key={""} />)
     }
     if (key == "Experiences") {
       setTab(key);
 
       message.info("Job Experiences");
 
-      setContent(<Experiences />)
+      setContent(<Experiences key={""} />)
     }
     if (key == "NFTs") {
       setTab(key);
 
       message.info("Personal NFTs Collection");
-      setContent(<NFTs />)
+      setContent(<NFTs key={""} />)
     }
   };
 
-  const [content, setContent] = useState(<About onChangeTab={onChangeTab} />);
+  const [content, setContent] = useState(<About key={"about"} onChangeTab={onChangeTab} />);
   const [isLoading, setIsLoading] = useState(true);
   const { TabPane } = Tabs
   useEffect(() => {
@@ -93,7 +89,7 @@ const Home: NextPage = () => {
         <meta property="og:title" content="Srilokh Karuturi" key="title" />
       </Head>
       <HeaderMain />
-      <Layout className='mainLayout'>
+      <Layout className='mainLayout' key={"default"}>
         <Tabs activeKey={tab} defaultActiveKey="About" onChange={onChangeTab} style={{ paddingLeft: "1rem", paddingRight: "1rem" }} >
           <TabPane tab={<Title level={5}>About</Title>} key="About"> {content} </TabPane>
           <TabPane tab={<Title level={5}>Resume</Title>} key="Resume"> {content} </TabPane>
