@@ -37,6 +37,7 @@ const Contact: NextPage = () => {
             </Row>
             <Row align="middle" justify="center" typeof="flex" style={{ "fontSize": "50px" }}>
               {getLogo(contact.name)}
+
             </Row>
 
           </Card>
