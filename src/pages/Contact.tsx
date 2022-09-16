@@ -35,7 +35,7 @@ const Contact: NextPage = () => {
                 <a href={contact.link}>{contact.name}</a>
               </Title>
             </Row>
-            <Row align="middle" justify="center" typeof="flex" style={{ "fontSize": "60px" }}>
+            <Row align="middle" justify="center" typeof="flex" style={{ "fontSize": "50px" }}>
               {getLogo(contact.name)}
             </Row>
 
