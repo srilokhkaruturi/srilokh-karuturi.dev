@@ -18,7 +18,7 @@
 					},
 					{
 						"Name":"AI/ML UTD BUILDING SPECIFIER",
-						"DescriptionShort":"App allows users to be able to take a photo or upload a photo of a building which will determine the name of the building at UTD via machine learning and artificial intelligence. The hardest part of the project was by far creating the ML model which required us to take over 500 photos of UTD buildings.",
+						"DescriptionShort":"App allows users to be able to take a photo or upload a photo of a building which will determine the name of the building at UTD via machine learning and artificial intelligence. ",
 						"DescriptionLong":"Nothing",
 						"Skills":["Swift", "XCode", "Vision", "CoreML", "CreateML", "UIKit"],
 						"URLS": {
