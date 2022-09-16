@@ -3,7 +3,7 @@
 				"Name":"Featured",
 				"Projects": [
 					{
-						"Name":"MICROSOFT/UTD DECENTRALIZED VERIFIABLE CREDENTIALSr",
+						"Name":"Microsft/UTD Decentralized Verifiable Credential",
 						"DescriptionShort":"Implementation of Microsoft's VC in UTD's Authentication",
 						"DescriptionLong":"Nothing",
 						"Skills":[".Net, Azure Active Directory, Microsoft Verifiable Credentials"],
@@ -17,7 +17,7 @@
 						}
 					},
 					{
-						"Name":"AI/ML UTD BUILDING SPECIFIER",
+						"Name":"AI/ML UTD Building Specifier",
 						"DescriptionShort":"App allows users to be able to take a photo or upload a photo of a building which will determine the name of the building at UTD via machine learning and artificial intelligence. ",
 						"DescriptionLong":"Nothing",
 						"Skills":["Swift", "XCode", "Vision", "CoreML", "CreateML", "UIKit"],
@@ -45,7 +45,7 @@
 						}
 					},
 					{
-						"Name":"Pro-Folio",
+						"Name":"Pro-folio",
 						"DescriptionShort":"Facilitate tracking any library, language and technology used for any item",
 						"DescriptionLong":"Nothing",
 						"Skills":["Typescript", "Next.js", "Javascript", "Mongo"],
