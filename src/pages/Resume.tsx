@@ -3,7 +3,7 @@ import type { NextPage } from 'next'
 const Resume: NextPage = () => {
 
   return (
-    <iframe src='/resume.pdf' style={{ width: "98vw", height: "100vh" }} />
+    <iframe src='/Srilokh Karuturi.pdf' style={{ width: "98vw", height: "100vh" }} />
   )
 }
 

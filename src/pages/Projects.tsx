@@ -22,6 +22,7 @@ type Project = {
 }
 
 type URLS = {
+  PrefURL: String,
   DemoURL: String,
   VideoURL: String,
   ImageURL: String,
@@ -51,25 +52,25 @@ const Projects: NextPage = () => {
                     {section.Projects.map((project: Project, projectIndex: number) => {
                       return (
                         <Col span={"12"} key={projectIndex}>
-                          <Card
-                            className='card-project'
-                            hoverable
-                            title={project.Name}
-                            key={projectIndex}
-                            extra={<a onClick={() => setIsModalVisible(true)}> <ExpandOutlined style={{ "fontSize": "25px" }} /> </a>}
-                          >
-                            <Space direction="vertical" >
-                              {project.DescriptionShort}
-                              <Space wrap>
-                                {project.Skills.map((skill: String, skillIndex: number) => { return <Tag className={"normal-tag"} key={skillIndex}>{skill}</Tag> })}
+                          <a href={project.URLS.PrefURL.toString()} target="_blank" rel={"noopener noreferrer"}>
+                            <Card
+                              className='card-project'
+                              hoverable
+                              title={project.Name}
+                              key={projectIndex}
+                            >
+                              <Space direction="vertical" >
+                                {project.DescriptionShort}
+                                <Space wrap>
+                                  {project.Skills.map((skill: String, skillIndex: number) => { return <Tag className={"normal-tag"} key={skillIndex}>{skill}</Tag> })}
+                                </Space>
+
                               </Space>
 
-                            </Space>
 
 
-
-                          </Card>
-
+                            </Card>
+                          </a>
                         </Col>
 
 
@@ -82,22 +83,7 @@ const Projects: NextPage = () => {
           )
         }
       </Collapse>
-
-      <Modal
-        visible={isModalVisible}
-        onCancel={() => setIsModalVisible(false)}
-
-      >
-
-
-
-
-      </Modal>
-    </FadeIn >
-
-
-
-
+    </FadeIn>
   )
 }
 export default Projects

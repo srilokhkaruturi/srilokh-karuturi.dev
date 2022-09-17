@@ -153,6 +153,17 @@ a:hover {
   outline: none;
 }
 
+.normal-button {
+  background-color: gray;
+  color: #e2ded7;
+  border-radius: 10px;
+  outline: none;
+}
+
+.normal-button:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0 0);
+}
+
 .normal-tag {
   background-color: gray;
   color: #e2ded7;
