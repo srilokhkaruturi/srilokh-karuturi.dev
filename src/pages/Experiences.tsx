@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Tabs, Typography, Descriptions, Tag, Space, Menu, Row, Card, Divider, Timeline, Badge } from 'antd'
+import { Tabs, Typography, Descriptions, Tag, Space, Menu, Row, Card, Divider, Timeline, Badge, Button } from 'antd'
 import experiencesData from '../data/experiences.json'
 import { useState } from 'react'
 import MenuDivider from 'antd/lib/menu/MenuDivider';
@@ -13,6 +13,7 @@ const { Title, Text } = Typography
 type experience = {
     companyShortName: string;
     company: string,
+    companyURL: string,
     title: string,
     startDate: string,
     endDate: string,
@@ -44,7 +45,8 @@ const Experiences: NextPage = () => {
                                 <Badge.Ribbon text={experience.endDate === "Present" ? "Present" : "Ended"} color={"gray"}>
                                     <Card className="experience-Tile">
 
-                                        <Descriptions labelStyle={{ "fontWeight": "bold" }} className={"experience-description"} title={experience.company + " - " + experience.title} >
+
+                                        <Descriptions labelStyle={{ "fontWeight": "bold" }} className={"experience-description"} title={getExperienceTitle(experience.companyURL, experience.company, experience.title)}>
 
                                             <Descriptions.Item label="Team">{experience.teamDescription}</Descriptions.Item>
 
@@ -93,6 +95,8 @@ const Experiences: NextPage = () => {
                                             </Descriptions>
                                         </Row>
 
+
+
                                         <Divider />
 
                                         <Descriptions labelStyle={{ "fontWeight": "bold" }} className={"experience-description"} title="Skills">
@@ -121,6 +125,22 @@ const Experiences: NextPage = () => {
         </div >
 
     )
+}
+
+
+const getExperienceTitle = (companyURL: string, company: string, title: string) => {
+    return (
+        <Space>
+            {<div> {company + " - " + title} </div>}
+            {getViewCompanyButton(companyURL)}
+        </Space>
+
+    )
+
+}
+
+const getViewCompanyButton = (companyURL: string) => {
+    return <a href={companyURL} target="_blank"><Button className='normal-button'> View Company </Button> </a>
 }
 
 export default Experiences;

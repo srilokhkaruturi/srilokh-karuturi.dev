@@ -3,6 +3,7 @@
         {
             "company":"International Business Machines",
             "companyShortName":"IBM",
+            "companyURL":"https://www.ibm.com/",
             "title":"Software Engineering Co-op",
             "startDate":"May 2022",
             "endDate":"Present",
@@ -42,6 +43,7 @@
         {
             "company":"BlockTrace",
             "companyShortName":"N/A",
+            "companyURL":"https://blocktrace.com/",
             "title":"Software Engineering Contractor",
             "startDate":"Dec 2021",
             "endDate":"Aug 2022",
@@ -71,6 +73,7 @@
         {
             "company":"BlockTrace",
             "companyShortName":"N/A",
+            "companyURL":"https://blocktrace.com/",
             "title":"Software Engineering Intern",
             "startDate":"Aug 2021",
             "endDate":"Dec 2021",
@@ -101,6 +104,7 @@
         {
             "company":"Dell",
             "companyShortName":"N/A",
+            "companyURL":"https://www.dell.com/",
             "title":"Software Engineer Apprentice",
             "startDate":"2018-02",
             "endDate":"2018-02",
