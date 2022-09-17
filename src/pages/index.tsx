@@ -36,6 +36,7 @@ const Home: NextPage = () => {
     }
     if (key == "Skills") {
       setTab(key);
+      message.info("Skills");
       setContent(<Skills key={""} />)
     }
     if (key == "Contact") {
