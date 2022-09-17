@@ -35,9 +35,9 @@ const NFTs: NextPage = () => {
                 hoverable
                 key={index}
                 style={{ width: 225, height: 350, margin: '0 10px 10px 0', backgroundColor: "#e2ded7" }}
-                cover={<Image key={index} src={NFTs.image_preview_url} style={{ width: 225, height: 225 }} />}
+                cover={<Image key={index} src={NFTs.image_preview_url} alt={"..."} style={{ width: 225, height: 225 }} />}
               >
-                <Card.Meta key={index} title={<a href={NFTs.permalink}> View on OpenSea </a>} description={NFTs.name} />
+                <Card.Meta key={index} title={<a href={NFTs.permalink} target="_blank" rel={"noopener noreferrer"}> View on OpenSea </a>} description={NFTs.name} />
               </Card>
 
             )

@@ -140,7 +140,7 @@ const getExperienceTitle = (companyURL: string, company: string, title: string) 
 }
 
 const getViewCompanyButton = (companyURL: string) => {
-    return <a href={companyURL} target="_blank"><Button className='normal-button'> View Company </Button> </a>
+    return <a href={companyURL} target={"_blank"} rel={"noopener noreferrer"}><Button className='normal-button'> View Company </Button> </a>
 }
 
 export default Experiences;

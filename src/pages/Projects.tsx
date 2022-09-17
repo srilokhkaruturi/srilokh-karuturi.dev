@@ -52,7 +52,7 @@ const Projects: NextPage = () => {
                     {section.Projects.map((project: Project, projectIndex: number) => {
                       return (
                         <Col span={"12"} key={projectIndex}>
-                          <a href={project.URLS.PrefURL.toString()} target="_blank">
+                          <a href={project.URLS.PrefURL.toString()} target="_blank" rel={"noopener noreferrer"}>
                             <Card
                               className='card-project'
                               hoverable

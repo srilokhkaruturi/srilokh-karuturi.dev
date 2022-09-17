@@ -32,7 +32,7 @@ const Contact: NextPage = () => {
           <Card className="card-contact" key={index}>
             <Row align="middle" justify='center' typeof='flex'>
               <Title>
-                <a href={contact.link} target="_blank">{contact.name}</a>
+                <a href={contact.link} target="_blank" rel={"noopener noreferrer"}>{contact.name}</a>
               </Title>
             </Row>
             <Row align="middle" justify="center" typeof="flex" style={{ "fontSize": "50px" }}>
