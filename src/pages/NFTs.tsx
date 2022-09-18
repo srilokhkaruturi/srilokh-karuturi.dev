@@ -80,7 +80,7 @@ const getNFTsData = async () => {
     redirect: redirectOption
   };
 
-  const response = await fetch("http://" + window.location.hostname + ":3000/api/getNFTData", requestOptions)
+  const response = await fetch("http://localhost:3000/api/getNFTData", requestOptions)
   const responseObject = await response.json()
   return responseObject
 }
