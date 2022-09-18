@@ -13,6 +13,7 @@
     "@carbon/react": "1.1.0",
     "antd": "^4.21.5",
     "axios": "^0.27.2",
+    "firebase": "^9.10.0",
     "grapheme-splitter": "^1.0.4",
     "next": "12.2.2",
     "react": "18.2.0",

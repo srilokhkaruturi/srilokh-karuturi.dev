@@ -11,7 +11,6 @@ import Projects from './Projects';
 import Skills from './Skills';
 import Experiences from './Experiences';
 import Head from 'next/head';
-
 const { Header, Footer, Sider, Content } = Layout;
 const { Title, Text } = Typography;
 const Home: NextPage = () => {

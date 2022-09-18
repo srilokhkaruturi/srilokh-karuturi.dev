@@ -7,13 +7,20 @@ import { BsStackOverflow } from 'react-icons/bs'
 import FadeIn from 'react-fade-in'
 import { SiDevpost } from 'react-icons/si'
 const { Title, Text } = Typography
-
 import contactsData from '../data/contacts.json'
+import { addDoc, collection, CollectionReference, doc, Firestore, getDoc, getDocs, getFirestore, QuerySnapshot } from "firebase/firestore"
+import { useEffect, useState } from 'react'
+import { initializeApp } from 'firebase/app'
+import SkeletonContacts from './components/SkeletonContacts'
+
 type contactInfoType = {
   name: string,
   link: string,
 }
 
+type API_DATA = {
+  contacts: contactInfoType[]
+}
 
 /*
 LinkedinFilled
@@ -23,12 +30,27 @@ FaProjectDiagram
 */
 
 const Contact: NextPage = () => {
-  const contacts: contactInfoType[] = contactsData.contacts
+  // const contacts: contactInfoType[] = contactsData.contacts
+  const [loading, setLoading] = useState(true);
+  const [contactsData, setContactsData] = useState<contactInfoType[]>([]);
+
+  useEffect(() => {
+    getContactsData().then(
+      (data: API_DATA | void) => { data && setContactsData(data.contacts) })
+      .then(() => { setLoading(false) });
+  }, []);
+
+  if (loading) {
+    return (
+      <SkeletonContacts />
+    )
+  }
+
 
   return (
     <FadeIn>
       <Space wrap>
-        {contacts.map((contact: contactInfoType, index: number) => (
+        {contactsData.map((contact: contactInfoType, index: number) => (
           <Card className="card-contact" key={index}>
             <Row align="middle" justify='center' typeof='flex'>
               <Title>
@@ -72,6 +94,21 @@ function getLogo(name: String) {
   }
 }
 
+// GET DATA OF CONTACT AT PAGE REQUEST
+const getContactsData = async () => {
 
+  var redirectOption: RequestRedirect = "follow"
+
+  var requestOptions = {
+    method: 'GET',
+    redirect: redirectOption
+  };
+
+  const response = await fetch("http://" + window.location.hostname + ":3000/api/getContactData", requestOptions)
+  const responseObject = await response.json()
+  console.log(responseObject)
+  return responseObject
+
+}
 
 export default Contact

@@ -11,13 +11,33 @@ type asset = {
   image_preview_url: string,
 }
 
+type API_RESPONSE = {
+  assets: asset[]
+}
+
+
+
+
+
+
 
 const NFTs: NextPage = () => {
   const [loading, setLoading] = useState(true);
-  const [NFTsData, setNFTsData] = useState([]);
+  const [NFTsData, setNFTsData] = useState<asset[]>([]);
   useEffect(() => {
 
-    getNFTsData().then(data => { setNFTsData(data.assets) }).then(() => { setLoading(false) });
+    getNFTsData().then(
+      (response: API_RESPONSE) => {
+        //@ts-ignore
+        if (response) {
+          setNFTsData(response.assets)
+        }
+      })
+
+      .then(() => {
+        setLoading(false)
+      });
+
 
   }, []);
 
@@ -52,27 +72,17 @@ const NFTs: NextPage = () => {
   )
 }
 
-
 const getNFTsData = async () => {
-  var config = {
-    method: 'get',
-    url: 'https://api.opensea.io/api/v1/assets?owner=0xd8f89ed994d61bd8bb602cbe76c48a1092269689',
-    headers: {
-      'X-API-KEY': 'a84fe116dff7488ba92f5c4667283090',
-      'Content-Type': 'application/json'
-    }
+  var redirectOption: RequestRedirect = "follow"
+
+  var requestOptions = {
+    method: 'GET',
+    redirect: redirectOption
   };
 
-
-  const response = await axios(config)
-    .then(function (response) {
-      return response.data;
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-
-  return response;
+  const response = await fetch("http://" + window.location.hostname + ":3000/api/getNFTData", requestOptions)
+  const responseObject = await response.json()
+  return responseObject
 }
 
 export default NFTs;
