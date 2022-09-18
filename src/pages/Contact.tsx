@@ -104,7 +104,7 @@ const getContactsData = async () => {
     redirect: redirectOption
   };
 
-  const response = await fetch("http://localhost:3000/api/getContactData", requestOptions)
+  const response = await fetch("/api/getContactData", requestOptions)
   const responseObject = await response.json()
   console.log(responseObject)
   return responseObject
