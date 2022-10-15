@@ -103,7 +103,7 @@ const getContactsData = async () => {
     method: 'GET',
     redirect: redirectOption
   };
-
+  // if you used a express node.js server running on localhost:3001 
   const response = await fetch("/api/getContactData", requestOptions)
   const responseObject = await response.json()
   console.log(responseObject)

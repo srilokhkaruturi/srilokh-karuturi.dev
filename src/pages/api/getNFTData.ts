@@ -15,6 +15,8 @@ export default async function getNFTData(req: NextApiRequest, res: NextApiRespon
 
         // DEFINE HEADERS
         var myHeaders = new Headers();
+
+        // DEFINE THE API KEY OF OPENSEA IN THE HEADERS
         myHeaders.append("X-API-KEY", OPENSEA_API_KEY)
 
         var redirectOption: RequestRedirect = "follow"
