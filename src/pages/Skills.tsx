@@ -3,6 +3,7 @@ import type { NextPage } from 'next'
 import { useEffect, useState } from 'react'
 import skillsData from "../data/skills.json"
 import SkeletonContacts from './components/SkeletonContacts'
+import SkeletonEverything from './components/SkeletonEverything'
 const { Text, Title } = Typography
 
 interface skillsDataInterface {
@@ -25,7 +26,7 @@ const Skills: NextPage = () => {
   // IF WE ARE LOADING THEN DISPLAY SKELETONS
   if (loading) {
     return (
-      <SkeletonContacts />
+      <SkeletonEverything />
     )
   }
   // IF WE HAVE DATA THEN DISPLAY ALL OF THE SKILLS

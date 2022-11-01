@@ -1,63 +1,69 @@
 {
-	"Sections": [{
-				"Name":"Featured",
-				"Projects": [
-					{
-						"Name":"Microsft UTD Decentralized Verifiable Credential",
-						"DescriptionShort":"Implementation of Microsoft's VC in UTD's Authentication",
-						"DescriptionLong":"Nothing",
-						"Skills":[".Net", "Azure Active Directory", "Microsoft Verifiable Credentials"],
-						"URLS": {
-							"PrefURL":"https://devpost.com/software/utd-verifiable-credentials-demo?ref_content=my-projects-tab&ref_feature=my_projects",
-							"DemoURL":"google.com",
-							"VideoURL":"google.com",
-							"ImageURL":"google.com",
-							"GithubURL":"google.com",
-							"DevPostURL":"google.com"
-						}
-					},
-					{
-						"Name":"AI/ML UTD Building Specifier",
-						"DescriptionShort":"App allows users to be able to take a photo or upload a photo of a building which will determine the name of the building at UTD via machine learning and artificial intelligence. ",
-						"DescriptionLong":"Nothing",
-						"Skills":["Swift", "XCode", "Vision", "CoreML", "CreateML", "UIKit"],
-						"URLS": {
-							"PrefURL":"https://devpost.com/software/utd-building-classifier?ref_content=my-projects-tab&ref_feature=my_projects",
-							"DemoURL":"google.com",
-							"VideoURL":"google.com",
-							"ImageURL":"google.com",
-							"GithubURL":"google.com",
-							"DevPostURL":"google.com"
-						}
-					},
-					{
-						"Name":"Personal Website V1",
-						"DescriptionShort":"A personal website also allows people from all around the world to see your creativity, skills, experiences on a more personalized level. It's also a great sign of a developer who is passionate about his career.",
-						"DescriptionLong":"Nothing",
-						"Skills":["HTML","CSS","SCSS","JS"],
-						"URLS": {
-							"PrefURL":"https://sai-k02.github.io",
-							"DemoURL":"google.com",
-							"VideoURL":"google.com",
-							"ImageURL":"google.com",
-							"GithubURL":"google.com",
-							"DevPostURL":"google.com"
-						}
-					},
-					{
-						"Name":"Pro-folio",
-						"DescriptionShort":"Facilitate tracking any library, language and technology used for any item",
-						"DescriptionLong":"Nothing",
-						"Skills":["Typescript", "Next.js", "Javascript", "Mongo"],
-						"URLS": {
-							"PrefURL":"N/A",
-							"DemoURL":"google.com",
-							"VideoURL":"google.com",
-							"ImageURL":"google.com",
-							"GithubURL":"google.com",
-							"DevPostURL":"google.com"
-						}
-					}
-				]
-			}]
+  "Sections": [
+    {
+      "Name": "Featured",
+      "Projects": [
+        {
+          "Name": "Microsoft UTD Decentralized Verifiable Credential",
+          "DescriptionShort": "Implementation of Microsoft's VC in UTD's Authentication",
+          "DescriptionLong": "Nothing",
+          "Skills": [
+            ".Net",
+            "Azure Active Directory",
+            "Microsoft Verifiable Credentials"
+          ],
+          "URLS": {
+            "PrefURL": "https://devpost.com/software/utd-verifiable-credentials-demo?ref_content=my-projects-tab&ref_feature=my_projects",
+            "DemoURL": "google.com",
+            "VideoURL": "google.com",
+            "ImageURL": "google.com",
+            "GithubURL": "google.com",
+            "DevPostURL": "google.com"
+          }
+        },
+        {
+          "Name": "AI/ML UTD Building Specifier",
+          "DescriptionShort": "App allows users to be able to take a photo or upload a photo of a building which will determine the name of the building at UTD via machine learning and artificial intelligence. ",
+          "DescriptionLong": "Nothing",
+          "Skills": ["Swift", "XCode", "Vision", "CoreML", "CreateML", "UIKit"],
+          "URLS": {
+            "PrefURL": "https://devpost.com/software/utd-building-classifier?ref_content=my-projects-tab&ref_feature=my_projects",
+            "DemoURL": "google.com",
+            "VideoURL": "google.com",
+            "ImageURL": "google.com",
+            "GithubURL": "google.com",
+            "DevPostURL": "google.com"
+          }
+        },
+        {
+          "Name": "Personal Website V1",
+          "DescriptionShort": "A personal website also allows people from all around the world to see your creativity, skills, experiences on a more personalized level. It's also a great sign of a developer who is passionate about his career.",
+          "DescriptionLong": "Nothing",
+          "Skills": ["HTML", "CSS", "SCSS", "JS"],
+          "URLS": {
+            "PrefURL": "https://sai-k02.github.io",
+            "DemoURL": "google.com",
+            "VideoURL": "google.com",
+            "ImageURL": "google.com",
+            "GithubURL": "google.com",
+            "DevPostURL": "google.com"
+          }
+        },
+        {
+          "Name": "Pro-folio",
+          "DescriptionShort": "Facilitate tracking any library, language and technology used for any item",
+          "DescriptionLong": "Nothing",
+          "Skills": ["Typescript", "Next.js", "Javascript", "Mongo"],
+          "URLS": {
+            "PrefURL": "N/A",
+            "DemoURL": "google.com",
+            "VideoURL": "google.com",
+            "ImageURL": "google.com",
+            "GithubURL": "google.com",
+            "DevPostURL": "google.com"
+          }
+        }
+      ]
+    }
+  ]
 }

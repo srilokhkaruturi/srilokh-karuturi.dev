@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import SkeletonNFTs from './components/SkeletonNFTs'
 import { Image, Space, Card } from 'antd';
 import FadeIn from 'react-fade-in';
+import SkeletonEverything from './components/SkeletonEverything';
 
 type asset = {
   name: string,
@@ -42,20 +43,23 @@ const NFTs: NextPage = () => {
   }, []);
 
   if (loading) {
-    return (<SkeletonNFTs />)
+    return (<SkeletonEverything />)
   }
   return (
     <>
       <FadeIn>
-        <Space wrap>
+        <div className="nft__card-wrapper">
 
           {NFTsData && NFTsData.map((NFTs: asset, index: number) => {
             return (
               <Card
+                id={"nft__card-" + index}
                 hoverable
                 key={index}
-                style={{ width: 225, height: 350, margin: '0 10px 10px 0', backgroundColor: "#e2ded7" }}
-                cover={<Image key={index} src={NFTs.image_preview_url} alt={"..."} style={{ width: 225, height: 225 }} />}
+                // style={{ width: "15%", height: "100%", margin: '', backgroundColor: "#e2ded7" }}
+                style={{ width: 250, height: 375, backgroundColor: "#e2ded7", marginBottom: "24px" }}
+                // cover={<Image key={index} src={NFTs.image_preview_url} alt={"..."} style={{ width: "100%", height: "100%" }} />}
+                cover={<Image key={index} src={NFTs.image_preview_url} alt={"..."} style={{ width: 250, height: 250 }} />}
               >
                 <Card.Meta key={index} title={<a href={NFTs.permalink} target="_blank" rel={"noopener noreferrer"}> View on OpenSea </a>} description={NFTs.name} />
               </Card>
@@ -64,7 +68,7 @@ const NFTs: NextPage = () => {
           }
           )}
 
-        </Space>
+        </div>
 
       </FadeIn>
     </>

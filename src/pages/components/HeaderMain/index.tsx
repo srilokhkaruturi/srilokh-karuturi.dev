@@ -38,11 +38,10 @@ const HeaderMain: NextPage = () => {
                     title={<a onClick={() => location.assign("/")}>Srilokh Karuturi</a>}
                     subTitle={<a>Software Engineering Intern at IBM</a>}
                     extra={[
-                        <Tooltip key={""} title="LinkedIn" > <a href={"https://www.linkedin.com/in/srilokh-karuturi/"}><LinkedinFilled style={{ fontSize: "30px" }} /> </a> </Tooltip>,
-                        <Tooltip key={""} title="Github"><a href={"https://github.com/sai-k02"} ><GithubFilled style={{ fontSize: "30px" }} /></a></Tooltip>,
-                        <Tooltip key={""} title="StackOverflow"><a href={"https://stackoverflow.com/users/16441524/sigh"}><BsStackOverflow style={{ fontSize: "30px" }} /></a></Tooltip>,
-                        // <Tooltip key={""} title="Profolio"><a href={"https://stackoverflow.com/users/16441524/sigh"}><FaProjectDiagram style={{ fontSize: "30px" }} /></a></Tooltip>,
-                        <Tooltip key={""} title="Email"><a><AiTwotoneMail style={{ fontSize: "30px" }} /> </a> </Tooltip>,
+                        <Tooltip key={""} title="LinkedIn" className="headerSocialIcon" > <a href={"https://www.linkedin.com/in/srilokh-karuturi/"}><LinkedinFilled style={{ fontSize: "30px" }} /> </a> </Tooltip>,
+                        <Tooltip key={""} title="Github" className="headerSocialIcon"><a href={"https://github.com/sai-k02"} ><GithubFilled style={{ fontSize: "30px" }} /></a></Tooltip>,
+                        <Tooltip key={""} title="StackOverflow" className="headerSocialIcon"><a href={"https://stackoverflow.com/users/16441524/sigh"}><BsStackOverflow style={{ fontSize: "30px" }} /></a></Tooltip>,
+                        <Tooltip key={""} title="Email" className="headerSocialIcon"><a><AiTwotoneMail style={{ fontSize: "30px" }} /> </a> </Tooltip>,
                     ]}
 
                 />

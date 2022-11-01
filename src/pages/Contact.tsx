@@ -12,6 +12,7 @@ import { addDoc, collection, CollectionReference, doc, Firestore, getDoc, getDoc
 import { useEffect, useState } from 'react'
 import { initializeApp } from 'firebase/app'
 import SkeletonContacts from './components/SkeletonContacts'
+import SkeletonEverything from './components/SkeletonEverything'
 
 type contactInfoType = {
   name: string,
@@ -42,7 +43,7 @@ const Contact: NextPage = () => {
 
   if (loading) {
     return (
-      <SkeletonContacts />
+      <SkeletonEverything />
     )
   }
 

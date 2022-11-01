@@ -8,6 +8,18 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+// :root {
+//   --blue: #abbcd2;
+//   --green: #6AE11E;
+//   --purple: #961EE1;
+//   --yellow: #EFED10;
+// }
+
+// .blue { background-color: var(--blue); }
+// .green { background-color: var(--green); }
+// .purple { background-color: var(--purple); }
+// .yellow { background-color: var(--yellow); }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -18,6 +30,13 @@ a:hover {
 
 * {
   box-sizing: border-box;
+}
+.ant-card-body h3 {
+  font-weight: 700;
+}
+
+.ant-card-head-title {
+  font-weight: 700;
 }
 
 .HeaderMain {
@@ -36,12 +55,16 @@ a:hover {
   background-color: white;
 }
 
+
+
 .card-about {
   background: #e2ded7;
   margin: 15px;
   width: 50vw;
   border-radius: 10px;
   text-align: left;
+
+  transition: all 300ms ease-in;
 }
 
 .experiences-menu {
@@ -57,18 +80,45 @@ a:hover {
   height: 512px;
 }
 
+
+
+// EXAMPLE SECTION
+.card__directory--wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .card-directory {
   background: #e2ded7;
   margin: 15px;
-  height: 21vh;
-  width: 14vw;
+  // height: 21vh;
+  min-height: 21vh;
+  // width: 14vw;
+  // width: calc(100%/4);
+  width: 25%;
   border-radius: 10px;
   text-align: left;
   outline: none;
+
+  transition: all 300ms ease;
+
+
+}
+
+.card-directory:nth-child(even) {
+  background-color: #1F90FF;
+
+  .ant-typography {
+    color: white;
+  }
 }
 
 .card-directory:hover {
+  cursor: pointer;
   background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0 0);
+  width: calc(25% + 30px);
 }
 
 .card-contact {
@@ -101,7 +151,8 @@ a:hover {
   background: #e2ded7;
   margin: 15px;
   min-width: none;
-  height: 200px;
+  min-height: 200px;
+  height: 100%;
   width: 20;
   border-radius: 10px;
   outline: none;
@@ -167,4 +218,99 @@ a:hover {
 .normal-tag {
   background-color: gray;
   color: #e2ded7;
+}
+
+
+.nft__card-wrapper {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  min-height: 100%;
+  height: 100%;
+}
+
+.nft__card-wrapper * {
+  transition: all 900ms ease;
+}
+
+
+#nft__card-0 {
+  position: absolute;
+  top: 175px;
+  left: 30px;
+} 
+
+#nft__card-1 {
+  position: absolute;
+  top: 30px;
+  left: 400px;
+}
+
+#nft__card-2 {
+  position: absolute;
+  top: 300px;
+  left: 700px;
+}
+
+#nft__card-3 {
+  position: absolute;
+  top: 10px;
+  left: 1100px;
+}
+
+
+@media (max-width: 400px) {
+  .ant-page-header-heading-sub-title{
+    display: none;
+  }
+  .ant-page-header-heading {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .ant-page-header-heading-title {
+    margin: 0 auto; 
+  }
+
+  .nft__card-wrapper {
+    flex-direction: column;
+  }
+}
+
+
+
+
+@media (max-width: 765px) {
+  .headerSocialIcon {
+    display: none;
+  }
+
+  
+  .card__directory--wrapper {
+    flex-direction: column;
+  }
+  
+  .card-directory {
+    width: 60vw !important;
+  }
+
+  .card-directory:hover {
+    width: 70vw !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .card-about {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1500px) {
+  #nft__card-0 { position: relative; top: 0; left: 0; }
+  #nft__card-1 { position: relative; top: 0; left: 0; } 
+  #nft__card-2 { position: relative; top: 0; left: 0; } 
+  #nft__card-3 { position: relative; top: 0; left: 0; }
 }

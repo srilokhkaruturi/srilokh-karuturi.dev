@@ -21,9 +21,6 @@ const SkeletonNFTs: NextPage = () => {
             <Skeleton.Button style={{ width: 225, height: 225 }} active />
             <Skeleton.Button style={{ width: 225, height: 225 }} active />
             <Skeleton.Button style={{ width: 225, height: 225 }} active />
-
-
-
         </Space>
 
     )

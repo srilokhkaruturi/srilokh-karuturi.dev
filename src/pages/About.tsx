@@ -18,7 +18,6 @@ const About: NextPage<AboutProps> = (props) => {
 
   // EXPORT TITLE
   const { Title, Text } = Typography;
-  const [typeWriterDone, setTypeWriterDone] = useState(false);
 
 
 
@@ -34,24 +33,19 @@ const About: NextPage<AboutProps> = (props) => {
               typewriter
                 .typeString("Hello, I'm <span style='color:#E2DED1'><strong>Srilokh</strong><span>")
                 .typeString(".")
-                .callFunction(() => {
-                  setTypeWriterDone(true);
-                })
                 .start();
             }}
 
           />
         </div>
-        <FadeIn visible={typeWriterDone}>
+        <FadeIn>
           <Title level={4}>Software Engineer</Title>
 
           <Row justify='center'>
             <Card className='card-about'>
-              <Title level={3}> About </Title>
+              <Title level={2} style={{ fontWeight: '700' }}> About </Title>
               <Title level={5}>
                 As of now, Sai is working @ IBM as a Software Engineering Intern/Co-op where he creates solutions to drive sales of IBM Software. Due to the nature of his role, he has to use many technologies sometimes within the same day. In one week, he might be working on AI/ML related client work to Full Stack Web Development to Server Installation.
-
-
               </Title>
               <Divider />
               <Title level={5}>
@@ -64,47 +58,37 @@ const About: NextPage<AboutProps> = (props) => {
             </Card>
           </Row>
 
-          <Row justify='center' >
-            <a onClick={() => onChangeTab("Resume")}>
-              <Card className='card-directory'>
-                <Title level={3} className='directory-text' > Resume </Title>
-                <Text type='secondary' > Skills, experiences, education, projects in a formal format</Text>
-              </Card>
-            </a>
+          <div className="card__directory--wrapper" >
+            <Card className='card-directory' onClick={() => onChangeTab("Resume")}>
+              <Title level={3} className='directory-text' > Resume </Title>
+              <Text type='secondary' > Skills, experiences, education, projects in a formal format</Text>
+            </Card>
 
-            <a onClick={() => onChangeTab("Experiences")}>
-              <Card className='card-directory'>
-                <Title level={3} className='directory-text'> Experiences </Title>
-                <Text type='secondary'> Personalized view of relevant job experiences </Text>
+            <Card className='card-directory' onClick={() => onChangeTab("Experiences")}>
+              <Title level={3} className='directory-text'> Experiences </Title>
+              <Text type='secondary'> Personalized view of relevant job experiences </Text>
+            </Card>
+            <Card className='card-directory' onClick={() => onChangeTab("Projects")}>
+              <Title level={3} className='directory-text'> Projects </Title>
+              <Text type='secondary'> Collection of relevant projects </Text>
+            </Card>
+            <Card className='card-directory' onClick={() => onChangeTab("Skills")}>
+              <Title level={3} className='directory-text'> Skills </Title>
+              <Text type='secondary'> Collection of skills  </Text>
+            </Card>
+            <Card className='card-directory' onClick={() => onChangeTab("NFTs")}>
+              <Title level={3} className='directory-text'> NFTs </Title>
+              <Text type='secondary'> Showcase of personal NFT's </Text>
+            </Card>
+            <Card className='card-directory' onClick={() => onChangeTab("Contact")}>
+              <Title level={3} className='directory-text'> Contact </Title>
+              <Text type='secondary'> Contact Info  </Text>
+            </Card>
+          </div>
 
-              </Card>
-            </a>
-            <a onClick={() => onChangeTab("Projects")}>
-              <Card className='card-directory'>
-                <Title level={3} className='directory-text'> Projects </Title>
-                <Text type='secondary'> Collection of relevant projects </Text>
-              </Card>
-            </a>
-            <a onClick={() => onChangeTab("Skills")}>
-              <Card className='card-directory'>
-                <Title level={3} className='directory-text'> Skills </Title>
-                <Text type='secondary'> Collection of skills gained from projects and experiences </Text>
-
-              </Card>
-            </a>
-            <a onClick={() => onChangeTab("NFTs")}>
-              <Card className='card-directory'>
-                <Title level={3} className='directory-text'> NFTs </Title>
-                <Text type='secondary'> Showcasing personal NFTs (data fetched from OpenSea) </Text>
-              </Card>
-            </a>
-            <a onClick={() => onChangeTab("Contact")}>
-              <Card className='card-directory'>
-                <Title level={3} className='directory-text'> Contact </Title>
-                <Text type='secondary'> Contact Info  </Text>
-              </Card>
-            </a>
-          </Row>
+          {/* <Row justify='center' >
+            
+          </Row> */}
 
           <Row justify='center' className="footer" style={{ "paddingTop": 2 }} >
             <Space direction="horizontal">

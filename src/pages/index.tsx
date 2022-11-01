@@ -1,4 +1,4 @@
-import { Layout, Menu, Tabs, Typography, message } from 'antd'
+import { Layout, Menu, Tabs, Typography } from 'antd'
 import type { NextPage } from 'next'
 import { useState, useEffect } from 'react';
 import About from './About';
@@ -24,38 +24,32 @@ const Home: NextPage = () => {
     if (key == "Resume") {
       setTab(key);
 
-      message.info("Resume");
       setContent(<Resume key={""} />)
     }
     if (key == "Projects") {
       setTab(key);
 
-      message.info("Projects");
       setContent(<Projects key={""} />)
     }
     if (key == "Skills") {
       setTab(key);
-      message.info("Skills");
       setContent(<Skills key={""} />)
     }
     if (key == "Contact") {
       setTab(key);
 
-      message.info("Contact info");
 
       setContent(<Contact key={""} />)
     }
     if (key == "Experiences") {
       setTab(key);
 
-      message.info("Job Experiences");
 
       setContent(<Experiences key={""} />)
     }
     if (key == "NFTs") {
       setTab(key);
 
-      message.info("Personal NFTs Collection");
       setContent(<NFTs key={""} />)
     }
   };
@@ -90,13 +84,13 @@ const Home: NextPage = () => {
       </Head>
       <HeaderMain />
       <Layout className='mainLayout' key={"default"}>
-        <Tabs activeKey={tab} defaultActiveKey="About" onChange={onChangeTab} style={{ paddingLeft: "1rem", paddingRight: "1rem" }} >
+        <Tabs activeKey={tab} defaultActiveKey="About" onChange={onChangeTab} style={{ height: '100%', paddingLeft: "1rem", paddingRight: "1rem" }}  >
           <TabPane tab={<Title level={5}>About</Title>} key="About"> {content} </TabPane>
           <TabPane tab={<Title level={5}>Resume</Title>} key="Resume"> {content} </TabPane>
           <TabPane tab={<Title level={5}>Experiences</Title>} key="Experiences" > {content} </TabPane>
           <TabPane tab={<Title level={5}>Projects</Title>} key="Projects"> {content} </TabPane>
-          <TabPane tab={<Title level={5}>Skills</Title>} key="Skills" >  {content} </TabPane>
           <TabPane tab={<Title level={5}>NFTs</Title>} key="NFTs" > {content} </TabPane>
+          <TabPane tab={<Title level={5}>Skills</Title>} key="Skills" >  {content} </TabPane>
           <TabPane tab={<Title level={5}>Contact</Title>} key="Contact" > {content} </TabPane>
         </Tabs>
       </Layout>
