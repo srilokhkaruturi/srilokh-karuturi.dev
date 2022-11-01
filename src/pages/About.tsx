@@ -78,7 +78,7 @@ const About: NextPage<AboutProps> = (props) => {
             </Card>
             <Card className='card-directory' onClick={() => onChangeTab("NFTs")}>
               <Title level={3} className='directory-text'> NFTs </Title>
-              <Text type='secondary'> Showcase of personal NFT's </Text>
+              <Text type='secondary'> Showcase of personal NFTs </Text>
             </Card>
             <Card className='card-directory' onClick={() => onChangeTab("Contact")}>
               <Title level={3} className='directory-text'> Contact </Title>
