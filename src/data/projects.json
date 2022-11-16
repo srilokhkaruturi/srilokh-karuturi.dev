@@ -55,7 +55,7 @@
           "DescriptionLong": "Nothing",
           "Skills": ["Typescript", "Next.js", "Javascript", "Mongo"],
           "URLS": {
-            "PrefURL": "N/A",
+            "PrefURL": "/",
             "DemoURL": "google.com",
             "VideoURL": "google.com",
             "ImageURL": "google.com",
