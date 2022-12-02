@@ -62,6 +62,20 @@
             "GithubURL": "google.com",
             "DevPostURL": "google.com"
           }
+        },
+        {
+          "Name": "Library Management System",
+          "DescriptionShort": "Management of Books, Borrowers, Loans, Fines",
+          "DescriptionLong": "Nothing",
+          "Skills": ["Typescript", "React", "Express", "Google Cloud"],
+          "URLS": {
+            "PrefURL": "https://lms-ui-service-hdzl5gs7hq-vp.a.run.app/",
+            "DemoURL": "google.com",
+            "VideoURL": "google.com",
+            "ImageURL": "google.com",
+            "GithubURL": "google.com",
+            "DevPostURL": "google.com"
+          }
         }
       ]
     }
