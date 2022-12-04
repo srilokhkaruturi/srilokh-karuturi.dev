@@ -55,7 +55,7 @@ const Projects: NextPage = () => {
                   <div className={styles.projects}>
                     {section.Projects.map((project: Project, projectIndex: number) => {
                       return (
-                        <a href={project.URLS.PrefURL.toString()} target="_blank" rel={"noopener noreferrer"}>
+                        <a href={project.URLS.PrefURL.toString()} key={projectIndex} target="_blank" rel={"noopener noreferrer"}>
                           <Card
                             className={styles.cardProject}
                             hoverable
