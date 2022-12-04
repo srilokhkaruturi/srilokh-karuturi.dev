@@ -1,0 +1,67 @@
+
+@media (min-width: 765px) {
+  
+    .experiencesSelect {
+        display: none;
+    }
+      
+}
+
+@media (max-width: 765px) {
+  
+    .experiencesMenuTabs {
+        display: none;
+    }
+      
+}
+
+
+.experiencesMenuTabs {
+    margin: 5px;
+    padding: 10px;
+    float: "left";
+    color: black;
+    width: "10px";
+}
+
+.experienceTile {    
+    background: #e2ded7;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    outline: none;
+    font-size: xxx-large;
+}
+
+
+.experiencesSelect {
+    width: 100%;
+}
+
+.experienceTileMobile {
+    margin-top: 20px;
+    background: #e2ded7;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.experienceTileDescriptionMobile {
+    padding: 0px;
+    background-color: inherit;
+    border: none;
+}
+
+.experienceTileSkillsMobile {
+    background-color: inherit;
+    border: none;
+}
+
+

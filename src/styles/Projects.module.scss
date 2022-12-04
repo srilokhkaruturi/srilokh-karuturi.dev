@@ -1,0 +1,29 @@
+
+// @media (min-width: 765px) {
+  
+//     .cardProject {
+//         display: none;
+//     }
+      
+// }
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cardProject {
+    background: #e2ded7;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    overflow:hidden;
+  }
+  
+  .cardProject:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0 0);
+  }
+  
+  

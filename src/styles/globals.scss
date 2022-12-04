@@ -67,19 +67,9 @@ a:hover {
   transition: all 300ms ease-in;
 }
 
-.experiences-menu {
-  margin: 5px;
-  padding: 10px;
-  float: "left";
-  color: black;
-  width: "10px";
+.ant-tabs-nav-more{
+  display: none;
 }
-
-.skeleton-NFTs {
-  width: 512px;
-  height: 512px;
-}
-
 
 
 // EXAMPLE SECTION
@@ -121,58 +111,10 @@ a:hover {
   width: calc(25% + 30px);
 }
 
-.card-contact {
-  background: #e2ded7;
-  margin: 15px;
-  height: 21vh;
-  width: fit-content;
-  border-radius: 10px;
-  outline: none;
-}
-
-.card-contact:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0 0);
-}
-
-.card-skill {
-  background: #e2ded7;
-  margin: 15px;
-  height: fit-content;
-  width: fit-content;
-  border-radius: 10px;
-  outline: none;
-}
-
-.card-skill:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0 0);
-}
-
-.card-project {
-  background: #e2ded7;
-  margin: 15px;
-  min-width: none;
-  min-height: 200px;
-  height: 100%;
-  width: 20;
-  border-radius: 10px;
-  outline: none;
-}
-
-.card-project:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0 0);
-}
 
 
 
 
-.experience-Tile {
-  background: #e2ded7;
-  width: fit-content;
-  height: fit-content;
-  border-radius: 10px;
-  outline: none;
-  font-size: xxx-large;
-}
 
 .normal-Tile {
   width: fit-content;
@@ -221,45 +163,6 @@ a:hover {
 }
 
 
-.nft__card-wrapper {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  min-height: 100%;
-  height: 100%;
-}
-
-.nft__card-wrapper * {
-  transition: all 900ms ease;
-}
-
-
-#nft__card-0 {
-  position: absolute;
-  top: 175px;
-  left: 30px;
-} 
-
-#nft__card-1 {
-  position: absolute;
-  top: 30px;
-  left: 400px;
-}
-
-#nft__card-2 {
-  position: absolute;
-  top: 300px;
-  left: 700px;
-}
-
-#nft__card-3 {
-  position: absolute;
-  top: 10px;
-  left: 1100px;
-}
 
 
 @media (max-width: 400px) {
@@ -274,12 +177,27 @@ a:hover {
   .ant-page-header-heading-title {
     margin: 0 auto; 
   }
-
-  .nft__card-wrapper {
-    flex-direction: column;
-  }
 }
 
+// @media (max-width: 765){
+//   .experiencesMenu {
+//       margin: 5px;
+//       padding: 10px;
+//       float: "left";
+//       color: black;
+//       width: "10px";
+//       background-color: red;
+//   }
+// }
+
+// .experiencesMenu {
+//   margin: 5px;
+//   padding: 10px;
+//   float: "left";
+//   color: black
+//   width: "10px";
+//   background-color: red;
+// }
 
 
 
@@ -287,6 +205,10 @@ a:hover {
   .headerSocialIcon {
     display: none;
   }
+
+  // .experiencesMenu {
+  //   display: none;
+  // }
 
   
   .card__directory--wrapper {
@@ -308,9 +230,5 @@ a:hover {
   }
 }
 
-@media (max-width: 1500px) {
-  #nft__card-0 { position: relative; top: 0; left: 0; }
-  #nft__card-1 { position: relative; top: 0; left: 0; } 
-  #nft__card-2 { position: relative; top: 0; left: 0; } 
-  #nft__card-3 { position: relative; top: 0; left: 0; }
-}
+
+

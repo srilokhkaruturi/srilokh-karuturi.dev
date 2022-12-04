@@ -1,18 +1,16 @@
-import { Space, Typography, Row, Card, Divider } from 'antd'
 import type { NextPage } from 'next'
 import { useEffect, useState } from 'react'
-import skillsData from "../data/skills.json"
-import SkeletonContacts from './components/SkeletonContacts'
-import SkeletonEverything from './components/SkeletonEverything'
+import styles from '../styles/Skills.module.scss'
+// components
+import { Space, Typography, Row, Card, Divider } from 'antd'
 const { Text, Title } = Typography
+import SkeletonEverything from './components/SkeletonEverything'
 
 interface skillsDataInterface {
   skills: string[]
 }
 
 const Skills: NextPage = () => {
-  // GET DATA FROM JSON FILE
-  // const data: string[] = Array.from(new Set(skillsData.skills));
   const [loading, setLoading] = useState(true)
   const [skillsData, setSkillsData] = useState<string[]>([])
 
@@ -31,15 +29,14 @@ const Skills: NextPage = () => {
   }
   // IF WE HAVE DATA THEN DISPLAY ALL OF THE SKILLS
   return (
-    <Space size={1} wrap>
+    <div className={styles.skillsWrapper}>
       {skillsData.map((skill: string, index: number) => (
-        <Row align="middle" justify='center' typeof='flex' key={index}>
-          <Card className="card-skill" key={index}>
-            <Title level={3} key={index}>{skill}</Title>
-          </Card>
-        </Row>
+        <Card className={styles.cardSkill} key={index}>
+          <Title level={3} key={index}>{skill}</Title>
+        </Card>
+
       ))}
-    </Space>
+    </div>
 
   )
 }

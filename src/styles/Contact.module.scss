@@ -1,0 +1,33 @@
+
+@media (max-width: 765px) {
+    .contactWrapper {
+        flex-direction: vertical;
+        justify-content: center;
+    }
+    .cardContact {
+        width: 100% !important;
+    }
+}
+
+
+.contactWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: horizontal;
+}
+
+
+.cardContact {
+    background: #e2ded7;
+    margin: 15px;
+
+    height: fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    outline: none;
+  }
+  
+  .cardContact:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0 0);
+  }
+  

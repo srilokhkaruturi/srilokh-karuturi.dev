@@ -1,3 +1,6 @@
+import styles from '../styles/Contact.module.scss'
+
+
 import { GithubFilled, LinkedinFilled } from '@ant-design/icons'
 import { MdContactPage } from 'react-icons/md'
 import { Card, Space, Typography, Image, Row } from 'antd'
@@ -50,9 +53,9 @@ const Contact: NextPage = () => {
 
   return (
     <FadeIn>
-      <Space wrap>
+      <div className={styles.contactWrapper}>
         {contactsData.map((contact: contactInfoType, index: number) => (
-          <Card className="card-contact" key={index}>
+          <Card className={styles.cardContact} key={index}>
             <Row align="middle" justify='center' typeof='flex'>
               <Title>
                 <a href={contact.link} target="_blank" rel={"noopener noreferrer"}>{contact.name}</a>
@@ -65,7 +68,7 @@ const Contact: NextPage = () => {
 
           </Card>
         ))}
-      </Space>
+      </div>
     </FadeIn>
 
   )
