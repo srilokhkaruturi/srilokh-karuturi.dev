@@ -176,7 +176,7 @@ const getExperienceTileMobile = (key: string, dataExperiences: experience[]) => 
 
 
     return (
-        <Badge.Ribbon text={experience.endDate === "Present" ? "Present" : "Ended"} color={"gray"}>
+        <Badge.Ribbon className={styles.experienceTileMobileRibbon} text={experience.endDate === "Present" ? "Present" : "Ended"} color={"gray"}>
             <Card className={styles.experienceTileMobile}>
                 <Title level={1}> {experience.company}  </Title>
                 <Divider />
