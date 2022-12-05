@@ -4,125 +4,134 @@
       "company": "International Business Machines",
       "companyShortName": "IBM",
       "companyURL": "https://www.ibm.com/",
-      "title": "Software Engineering Co-op",
-      "startDate": "May 2022",
-      "endDate": "Present",
-      "location": "Coppell, TX",
-      "teamDescription": "Client Engineering - Industry Engineering Lab (Telecommunications Media Entertainment Market ) @ IBM Global Solutions Center in Coppell, TX.",
-      "highLevelDescription": "Demonstrate the value of IBM by engineering solutions in areas such as Machine Learning, Networking, Distributed Computing and Hybrid Cloud",
-      "description": [
-        "Work closely with team members and clients to generate high quality demo ready technical sales assets for the progression or close of solution sales opportunities",
-        "Develop full stack applications, utilizing modern web-development tools & frameworks",
-        "Work extensively with IBM Machine Learning Software to create demo ready solutions",
-        "Create, deploy and manage containerized applications using Docker and Kubernetes"
-      ],
-      "skills": [
-        "TypeScript",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Node.js",
-        "Express",
-        "Postgres",
-        "React",
-        "OpenShift",
-        "Git",
-        "IBM Cloud",
-        "OpenScale",
-        "Kubernetes",
-        "Docker",
-        "Podman",
-        "Maximo Visual Inspection Edge",
-        "Python",
-        "Bash",
-        "Zsh",
-        "SQL",
-        "Data Analysis",
-        "API Development"
+      "roles": [
+        {
+          "title": "Software Engineering Co-op",
+          "startDate": "May 2022",
+          "endDate": "Present",
+          "location": "Coppell, TX",
+          "teamDescription": "Client Engineering - Industry Engineering Lab (Telecommunications Media Entertainment Market ) @ IBM Global Solutions Center in Coppell, TX.",
+          "highLevelDescription": "Demonstrate the value of IBM by engineering solutions in areas such as Machine Learning, Networking, Distributed Computing and Hybrid Cloud",
+          "description": [
+            "Work closely with team members and clients to generate high quality demo ready technical sales assets for the progression or close of solution sales opportunities",
+            "Develop full stack applications, utilizing modern web-development tools & frameworks",
+            "Work extensively with IBM Machine Learning Software to create demo ready solutions",
+            "Create, deploy and manage containerized applications using Docker and Kubernetes"
+          ],
+          "skills": [
+            "TypeScript",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Node.js",
+            "Express",
+            "Postgres",
+            "React",
+            "OpenShift",
+            "Git",
+            "IBM Cloud",
+            "OpenScale",
+            "Kubernetes",
+            "Docker",
+            "Podman",
+            "Maximo Visual Inspection Edge",
+            "Python",
+            "Bash",
+            "Zsh",
+            "SQL",
+            "Data Analysis",
+            "API Development"
+          ]
+        }
       ]
     },
     {
       "company": "BlockTrace",
       "companyShortName": "N/A",
       "companyURL": "https://blocktrace.com/",
-      "title": "Software Engineering Contractor",
-      "startDate": "Dec 2021",
-      "endDate": "Aug 2022",
-      "location": "Dallas, TX",
-      "teamDescription": "Worked under CEO/Owner",
-      "highLevelDescription": "Engineer tools for monitoring cryptocurrency networks in real-time",
-      "description": [
-        "Sole developer of a Full Stack Web App 'Multi Blockchain Address Watching/Aggregating/Alerting'",
-        "Show complete proficiency in Data fetching(Public Blockchain Data), Data Parsing(JSON, SQL), Data Manipulating, Data Preparation/Representation using Python (Pandas, Excel)",
-        "Show proficiency in creating/working with databases (MongoDB, PostgreSQL, SQLite, Object Relational Mapping)",
-        "Design and iteratively develop full stack private in-house websites, utilizing modern web-development tools & frameworks i.e React.js, TypeScript, SCSS, Next.JS, Node.js",
-        "Create, deploy and manage containerized applications using Docker and Docker-Compose",
-        "Demonstrate presentation and public speaking skills with Code Reviews, Weekly StandUps, Demos"
-      ],
-      "skills": [
-        "Python",
-        "Docker",
-        "SQL",
-        "Postgres",
-        "Postman",
-        "Slack SDK",
-        "JSON",
-        "Node.js",
-        "Pandas",
-        "Blockchain Analysis",
-        "Bitcoin-CLI"
-      ]
-    },
-    {
-      "company": "BlockTrace",
-      "companyShortName": "N/A",
-      "companyURL": "https://blocktrace.com/",
-      "title": "Software Engineering Intern",
-      "startDate": "Aug 2021",
-      "endDate": "Dec 2021",
-      "location": "Austin, TX",
-      "teamDescription": "Provide custom-built tools monitor cryptocurrency networks in real-time to provide a high-level, detailed analysis of all blockchain transactions.",
-      "highLevelDescription": "Demonstrate excellence in knowledge gain of Blockchain Technologies and provide basic data engineering services",
-      "description": [
-        "Perform Data Parsing, Cleaning, Preparation using Python",
-        "Fork Bitcoin Source Code & Create Changes for in-house software(Bitcoin Timestamp Supernode)",
-        "Compile 2 Bitcoin Nodes from source in testnet using Ubuntu Virtual Machines for research purposes",
-        "Present 10+ use cases of Bitcoin-CLI for investigation, development, data fetching",
-        "Explain Complex Concepts in simple terms i.e Blockchain Technology, Cryptocurrency, Proof-of-work Algorithm, Double-Spending Problem",
-        "Demonstrate excellent soft-skills via code review, team development, presentations"
-      ],
-      "skills": [
-        "Python",
-        "Blockchain Analysis",
-        "Postman",
-        "SQLAlchemy",
-        "JSON",
-        "Linux",
-        "Wireshark",
-        "Bash",
-        "Pandas",
-        "Data Analysis",
-        "Git",
-        "Github"
+      "roles": [
+        {
+          "title": "Software Engineer",
+          "startDate": "Dec 2021",
+          "endDate": "Aug 2022",
+          "location": "Dallas, TX",
+          "teamDescription": "Worked under CEO/Owner",
+          "highLevelDescription": "Engineer tools for monitoring cryptocurrency networks in real-time",
+          "description": [
+            "Sole developer of a Full Stack Web App 'Multi Blockchain Address Watching/Aggregating/Alerting'",
+            "Show complete proficiency in Data fetching(Public Blockchain Data), Data Parsing(JSON, SQL), Data Manipulating, Data Preparation/Representation using Python (Pandas, Excel)",
+            "Show proficiency in creating/working with databases (MongoDB, PostgreSQL, SQLite, Object Relational Mapping)",
+            "Design and iteratively develop full stack private in-house websites, utilizing modern web-development tools & frameworks i.e React.js, TypeScript, SCSS, Next.JS, Node.js",
+            "Create, deploy and manage containerized applications using Docker and Docker-Compose",
+            "Demonstrate presentation and public speaking skills with Code Reviews, Weekly StandUps, Demos"
+          ],
+          "skills": [
+            "Python",
+            "Docker",
+            "SQL",
+            "Postgres",
+            "Postman",
+            "Slack SDK",
+            "JSON",
+            "Node.js",
+            "Pandas",
+            "Blockchain Analysis",
+            "Bitcoin-CLI"
+          ]
+        },
+        {
+          "title": "Software Engineering Intern",
+          "startDate": "Aug 2021",
+          "endDate": "Dec 2021",
+          "location": "Austin, TX",
+          "teamDescription": "Provide custom-built tools monitor cryptocurrency networks in real-time to provide a high-level, detailed analysis of all blockchain transactions.",
+          "highLevelDescription": "Demonstrate excellence in knowledge gain of Blockchain Technologies and provide basic data engineering services",
+          "description": [
+            "Perform Data Parsing, Cleaning, Preparation using Python",
+            "Fork Bitcoin Source Code & Create Changes for in-house software(Bitcoin Timestamp Supernode)",
+            "Compile 2 Bitcoin Nodes from source in testnet using Ubuntu Virtual Machines for research purposes",
+            "Present 10+ use cases of Bitcoin-CLI for investigation, development, data fetching",
+            "Explain Complex Concepts in simple terms i.e Blockchain Technology, Cryptocurrency, Proof-of-work Algorithm, Double-Spending Problem",
+            "Demonstrate excellent soft-skills via code review, team development, presentations"
+          ],
+          "skills": [
+            "Python",
+            "Blockchain Analysis",
+            "Postman",
+            "SQLAlchemy",
+            "JSON",
+            "Linux",
+            "Wireshark",
+            "Bash",
+            "Pandas",
+            "Data Analysis",
+            "Git",
+            "Github"
+          ]
+        }
       ]
     },
     {
       "company": "Dell",
       "companyShortName": "N/A",
       "companyURL": "https://www.dell.com/",
-      "title": "Software Engineer Apprentice",
-      "startDate": "2018-02",
-      "endDate": "2018-02",
-      "location": "Round Rock, TX",
-      "teamDescription": "Selection of exemplary highschool students to gain work-based experience of Dell Technologies",
-      "highLevelDescription": "Assist internal technical specialist team to solve tickets regarding Dell hardware issues",
-      "description": [
-        "Shadowing 5+ Software Engineers(Agile Development)",
-        "Mentored by a Senior Technician ",
-        "Q&A panel with Dell executives ",
-        "Resume Critique by Human Resources"
-      ],
-      "skills": ["Public Speaking", "Professionalism"]
+      "roles": [
+        {
+          "title": "Software Engineer Apprentice",
+          "startDate": "2018-02",
+          "endDate": "2018-02",
+          "location": "Round Rock, TX",
+          "teamDescription": "Selection of exemplary highschool students to gain work-based experience of Dell Technologies",
+          "highLevelDescription": "Assist internal technical specialist team to solve tickets regarding Dell hardware issues",
+          "description": [
+            "Shadowing 5+ Software Engineers(Agile Development)",
+            "Mentored by a Senior Technician ",
+            "Q&A panel with Dell executives ",
+            "Resume Critique by Human Resources"
+          ],
+          "skills": ["Public Speaking", "Professionalism"]
+        }
+      ]
     }
   ]
 }

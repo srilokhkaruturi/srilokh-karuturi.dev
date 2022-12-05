@@ -1,10 +1,13 @@
-import { PageHeader, Tooltip, Typography } from "antd";
+import type { NextPage } from "next";
+import styles from '../../../styles/Header.module.scss'
+
+// components
+import { Typography, Divider, Tooltip } from "antd";
 import { GithubFilled, LinkedinFilled } from "@ant-design/icons";
 import { AiTwotoneMail } from 'react-icons/ai';
 import { BsStackOverflow } from "react-icons/bs";
 import { FaProjectDiagram } from "react-icons/fa";
-import React, { useEffect, useState } from "react";
-import type { NextPage } from "next";
+import { useEffect, useState } from "react";
 import FadeIn from 'react-fade-in/lib/FadeIn';
 
 import SkeletonHeader from "./SkeletonHeader";
@@ -32,20 +35,33 @@ const HeaderMain: NextPage = () => {
 
     if (!isLoading) {
         return (
-            <FadeIn>
-                <PageHeader
-                    className="HeaderMain"
-                    title={<a onClick={() => location.assign("/")}>Srilokh Karuturi</a>}
-                    subTitle={<a>Software Engineering Intern at IBM</a>}
-                    extra={[
-                        <Tooltip key={""} title="LinkedIn" className="headerSocialIcon" > <a href={"https://www.linkedin.com/in/srilokh-karuturi/"}><LinkedinFilled style={{ fontSize: "30px" }} /> </a> </Tooltip>,
-                        <Tooltip key={""} title="Github" className="headerSocialIcon"><a href={"https://github.com/sai-k02"} ><GithubFilled style={{ fontSize: "30px" }} /></a></Tooltip>,
-                        <Tooltip key={""} title="StackOverflow" className="headerSocialIcon"><a href={"https://stackoverflow.com/users/16441524/sigh"}><BsStackOverflow style={{ fontSize: "30px" }} /></a></Tooltip>,
-                        <Tooltip key={""} title="Email" className="headerSocialIcon"><a><AiTwotoneMail style={{ fontSize: "30px" }} /> </a> </Tooltip>,
-                    ]}
+            <FadeIn >
 
-                />
+                <div className={styles.headerMain}>
+                    <div className={styles.headerTitle}>
+                        <text className={styles.titleText}> Srilokh Karuturi </text>
+                        <a className={styles.titleCurrentRole} type={"secondary"}>Software Engineering Intern</a>
+                    </div>
+
+                    <div className={styles.socialsHeader}>
+                        <Tooltip key={""} title="LinkedIn" className="headerSocialIcon" > <a href={"https://www.linkedin.com/in/srilokh-karuturi/"}><LinkedinFilled style={{ fontSize: "30px" }} /> </a> </Tooltip>
+                        <Tooltip key={""} title="Github" className="headerSocialIcon"><a href={"https://github.com/sai-k02"} ><GithubFilled style={{ fontSize: "30px" }} /></a></Tooltip>
+                        <Tooltip key={""} title="StackOverflow" className="headerSocialIcon"><a href={"https://stackoverflow.com/users/16441524/sigh"}><BsStackOverflow style={{ fontSize: "30px" }} /></a></Tooltip>
+                        <Tooltip key={""} title="Email" className="headerSocialIcon"><a><AiTwotoneMail style={{ fontSize: "30px" }} /> </a> </Tooltip>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <Divider className={styles.headerLine} />
+
+
+
             </FadeIn>
+
         )
     }
 

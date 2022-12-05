@@ -23,6 +23,11 @@
       
 }
 
+.experiencesMenu{
+    width: 100%;
+    background: red;
+}
+
 
 .experiencesMenuTabs {
     margin: 5px;
@@ -30,6 +35,7 @@
     float: "left";
     color: black;
     width: "10px";
+    height: 100%
 }
 
 .experienceTile {    
@@ -39,6 +45,7 @@
     border-radius: 10px;
     outline: none;
     font-size: xxx-large;
+    margin-bottom: 10px;
 }
 
 

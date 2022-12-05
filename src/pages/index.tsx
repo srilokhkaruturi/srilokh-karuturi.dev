@@ -1,4 +1,4 @@
-import { Layout, Menu, Tabs, Typography } from 'antd'
+import { FloatButton, Layout, Menu, Tabs, Typography, Modal } from 'antd'
 import type { NextPage } from 'next'
 import { useState, useEffect } from 'react';
 import About from './About';
@@ -55,6 +55,7 @@ const Home: NextPage = () => {
   };
 
   const [content, setContent] = useState(<About key={"about"} onChangeTab={onChangeTab} />);
+  // const [floatingModalOpen, setFloatingModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const { TabPane } = Tabs
   useEffect(() => {
@@ -84,6 +85,10 @@ const Home: NextPage = () => {
       </Head>
       <HeaderMain />
       <Layout className='mainLayout' key={"default"}>
+        {/* <FloatButton onClick={() => setFloatingModalOpen(true)} /> */}
+        {/* <Modal className={"stats-modal"} open={floatingModalOpen} onCancel={() => setFloatingModalOpen(false)}>
+          Hello
+        </Modal> */}
         <Tabs activeKey={tab} defaultActiveKey="About" onChange={onChangeTab} style={{ height: '100%', paddingLeft: "1rem", paddingRight: "1rem" }}  >
           <TabPane tab={<Title level={5}>About</Title>} key="About"> {content} </TabPane>
           <TabPane tab={<Title level={5}>Resume</Title>} key="Resume"> {content} </TabPane>
