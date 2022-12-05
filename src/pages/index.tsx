@@ -1,4 +1,4 @@
-import { FloatButton, Layout, Menu, Tabs, Typography, Modal } from 'antd'
+import { Layout, Menu, Tabs, Typography, Modal } from 'antd'
 import type { NextPage } from 'next'
 import { useState, useEffect } from 'react';
 import About from './About';
