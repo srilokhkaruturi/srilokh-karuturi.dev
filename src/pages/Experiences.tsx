@@ -15,10 +15,7 @@ const { CheckableTag } = Tag;
 const { TabPane } = Tabs
 const { Title, Text } = Typography
 
-type experience = {
-    companyShortName: string;
-    company: string,
-    companyURL: string,
+type role = {
     title: string,
     startDate: string,
     endDate: string,
@@ -27,6 +24,14 @@ type experience = {
     highLevelDescription: string,
     description: string[],
     skills: string[]
+}
+
+type experience = {
+    companyShortName: string;
+    company: string,
+    companyURL: string,
+    roles: role[]
+
 }
 
 const Experiences: NextPage = () => {
