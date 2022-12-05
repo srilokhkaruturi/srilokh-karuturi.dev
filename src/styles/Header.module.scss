@@ -1,0 +1,59 @@
+@media (max-width: 560px) {
+    .socialsHeader {
+        display: none !important;
+    }
+    .headerMain {
+        height: 100px !important;
+    }
+
+    .headerTitle {
+        flex-direction: column;
+        float:none !important;
+    }
+}
+
+
+.headerMain {
+    background-color: #F5F5F5;
+    height: 74px;
+    width: 100%;
+    align-items: center;
+    
+}
+
+.headerLine {
+    box-shadow: 0 -1px 4px rgb(0 0 0 / 30%) !important;
+    margin: 0 !important;
+}
+
+.headerTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    height: 100%;
+    gap: 10px
+}
+
+.titleText{
+    font-weight: 600;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.titleCurrentRole{
+    color: gray;
+}
+
+
+.socialsHeader {
+    float: right;
+    display: flex;
+    flex-direction: horizontal;
+    gap: 5px;
+    height: 100% !important;
+    align-items: center !important;
+    padding-right: 10px;
+
+    
+}

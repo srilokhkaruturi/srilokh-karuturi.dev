@@ -1,7 +1,8 @@
-@import "~antd/dist/antd.css";
+@import "../../node_modules/antd/dist/reset.css";
 
 html,
 body {
+  background-color: #F5F5F5;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -39,20 +40,8 @@ a:hover {
   font-weight: 700;
 }
 
-.HeaderMain {
-  border: 1px solid rgb(235, 237, 240);
-  width: 100vw;
-  height: 70px;
-}
-
-.mainLayout {
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
-}
-
 .mainHeader {
-  background-color: white;
+  background-color: #e2ded7;
 }
 
 
@@ -163,22 +152,6 @@ a:hover {
 }
 
 
-
-
-@media (max-width: 400px) {
-  .ant-page-header-heading-sub-title{
-    display: none;
-  }
-  .ant-page-header-heading {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  .ant-page-header-heading-title {
-    margin: 0 auto; 
-  }
-}
-
 // @media (max-width: 765){
 //   .experiencesMenu {
 //       margin: 5px;
@@ -202,10 +175,6 @@ a:hover {
 
 
 @media (max-width: 765px) {
-  .headerSocialIcon {
-    display: none;
-  }
-
   // .experiencesMenu {
   //   display: none;
   // }

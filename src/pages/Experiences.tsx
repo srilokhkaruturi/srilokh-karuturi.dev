@@ -1,14 +1,12 @@
 import type { NextPage } from 'next'
-import experiencesData from '../data/experiences.json'
 import { useState } from 'react'
+import experiencesData from '../data/experiences.json'
 
 import styles from '../styles/Experiences.module.scss'
 
 // components
-import { Tabs, Typography, Select, Descriptions, Tag, Space, Menu, Row, Card, Divider, Timeline, Badge, Button } from 'antd'
-import MenuDivider from 'antd/lib/menu/MenuDivider';
-import DescriptionsItem from 'antd/lib/descriptions/Item';
-import Ribbon from 'antd/lib/badge/Ribbon'
+import { Badge, Button, Card, Descriptions, Divider, Row, Select, Space, Tabs, Tag, Timeline, Typography } from 'antd'
+import DescriptionsItem from 'antd/lib/descriptions/Item'
 
 
 const { CheckableTag } = Tag;
@@ -42,7 +40,11 @@ const Experiences: NextPage = () => {
     const getOptions = (dataExperiences: experience[]) => {
         var returnList: any[] = []
         dataExperiences.forEach((dataExperience: experience, key) => {
-            returnList.push({ key: key, label: dataExperience.company, value: key })
+            returnList.push({
+                key: key,
+                label: dataExperience.companyShortName == "N/A" ? dataExperience.company : dataExperience.companyShortName,
+                value: key
+            })
         })
 
         return returnList
@@ -63,7 +65,7 @@ const Experiences: NextPage = () => {
 
             {/* DEFAULT SCREEN */}
 
-            <div className="experiencesNormal">
+            <div className={styles.experiencesMenu}>
                 {experiences && experiences.length > 0 && (
 
 
@@ -72,85 +74,88 @@ const Experiences: NextPage = () => {
                         {experiences.map((experience, index) => (
 
                             <TabPane tab={<Title level={3}>{experience.companyShortName === "N/A" ? experience.company : experience.companyShortName}</Title>} key={index}>
-                                <div className="experience">
-                                    <Badge.Ribbon text={experience.endDate === "Present" ? "Present" : "Ended"} color={"gray"}>
-                                        <Card className={styles.experienceTile}>
+
+                                {experience.roles.map((role: role, index) => {
+                                    return (
 
 
-                                            <Descriptions labelStyle={{ "fontWeight": "bold" }} className={"experience-description"} title={getExperienceTitle(experience.companyURL, experience.company, experience.title)}>
+                                        <div className="experience" key={index}>
+                                            <Badge.Ribbon key={index} text={role.endDate === "Present" ? "Present" : "Ended"} color={"gray"}>
+                                                <Card key={index} className={styles.experienceTile}>
 
-                                                <Descriptions.Item label="Team">{experience.teamDescription}</Descriptions.Item>
+                                                    <Descriptions labelStyle={{ "fontWeight": "bold" }} className={"experience-description"} title={getExperienceTitle(experience.companyURL, experience.company, role.title)}>
 
-                                                <Descriptions.Item label="Description">
-                                                    <Space direction="horizontal">
-                                                        {experience.highLevelDescription}
+                                                        <Descriptions.Item label="Team">{role.teamDescription}</Descriptions.Item>
 
-                                                    </Space>
-                                                </Descriptions.Item>
+                                                        <Descriptions.Item label="Description">
+                                                            <Space direction="horizontal">
+                                                                {role.highLevelDescription}
 
-                                                <Descriptions.Item label="Duration">
-                                                    <Timeline pendingDot>
-                                                        <Timeline.Item color={"gray"} ><CheckableTag className={"checkable-tag date-tag"} checked>{experience.startDate}</CheckableTag></Timeline.Item>
-                                                        <Timeline.Item color={"gray"} ><CheckableTag className={"checkable-tag date-tag"} checked> {experience.endDate} </CheckableTag></Timeline.Item>
-                                                    </Timeline>
-                                                </Descriptions.Item>
+                                                            </Space>
+                                                        </Descriptions.Item>
 
-                                                <Descriptions.Item label="Location">
+                                                        <Descriptions.Item label="Duration">
+                                                            <Timeline pendingDot>
+                                                                <Timeline.Item color={"gray"} ><CheckableTag className={"checkable-tag date-tag"} checked>{role.startDate}</CheckableTag></Timeline.Item>
+                                                                <Timeline.Item color={"gray"} ><CheckableTag className={"checkable-tag date-tag"} checked> {role.endDate} </CheckableTag></Timeline.Item>
+                                                            </Timeline>
+                                                        </Descriptions.Item>
 
-                                                    {experience.location}
+                                                        <Descriptions.Item label="Location">
 
-                                                </Descriptions.Item>
+                                                            {role.location}
 
-
-
-
-
-                                            </Descriptions>
-
-                                            <Divider />
-
-                                            <Row justify='center'>
-
-                                                <Descriptions className={"experience-description"}>
-
-                                                    <DescriptionsItem>
-                                                        <Space direction="vertical" wrap size={12}>
-
-                                                            {experience.description.map((description, index) => (
-                                                                <Badge status="default" color={"gray"} key={index} text={description} />
-
-                                                            ))}
-                                                        </Space>
-                                                    </DescriptionsItem>
-
-                                                </Descriptions>
-                                            </Row>
+                                                        </Descriptions.Item>
 
 
 
-                                            <Divider />
-
-                                            <Descriptions labelStyle={{ "fontWeight": "bold" }} className={"experience-description"} title="Skills">
-
-                                                <Descriptions.Item>
-                                                    <Space wrap>
-                                                        {experience.skills.map((skill, index) => (<Tag className={"normal-tag"} key={index}>{skill}</Tag>))}
-                                                    </Space>
-                                                </Descriptions.Item>
 
 
-                                            </Descriptions>
+                                                    </Descriptions>
 
-                                        </Card>
-                                    </Badge.Ribbon>
-                                </div>
+                                                    <Divider />
+
+                                                    <Row justify='center'>
+
+                                                        <Descriptions className={"experience-description"}>
+
+                                                            <DescriptionsItem>
+                                                                <Space direction="vertical" wrap size={12}>
+
+                                                                    {role.description.map((description, index) => (
+                                                                        <Badge status="default" color={"gray"} key={index} text={description} />
+
+                                                                    ))}
+                                                                </Space>
+                                                            </DescriptionsItem>
+
+                                                        </Descriptions>
+                                                    </Row>
+
+
+
+                                                    <Divider />
+
+                                                    <Descriptions labelStyle={{ "fontWeight": "bold" }} className={"experience-description"} title="Skills">
+
+                                                        <Descriptions.Item>
+                                                            <Space wrap>
+                                                                {role.skills.map((skill, index) => (<Tag className={"normal-tag"} key={index}>{skill}</Tag>))}
+                                                            </Space>
+                                                        </Descriptions.Item>
+
+
+                                                    </Descriptions>
+
+                                                </Card>
+                                            </Badge.Ribbon>
+                                        </div>
+
+                                    )
+                                })}
                             </TabPane>
                         ))}
                     </Tabs>
-
-                    /*
-                    MOBILE SCREEN
-                    */
                 )
                 }
             </div>
@@ -161,13 +166,13 @@ const Experiences: NextPage = () => {
                 <Select
                     dropdownMatchSelectWidth
                     defaultValue={selection}
-                    onChange={(value) => { setSelection((value)) }}
+                    onChange={(value: {}) => { setSelection((value)) }}
                     size='large'
                     className={styles.experiencesSelect}
                     options={selectionOptions}
                 />
 
-                {getExperienceTileMobile(selection, experiences)}
+                {getExperienceTilesMobile(selection, experiences)}
 
             </div>
         </>
@@ -175,39 +180,50 @@ const Experiences: NextPage = () => {
     )
 }
 
-const getExperienceTileMobile = (key: string, dataExperiences: experience[]) => {
+const getExperienceTilesMobile = (key: string, dataExperiences: experience[]) => {
 
     const experience: experience = dataExperiences[Number.parseInt(key)]
 
 
     return (
-        <Badge.Ribbon className={styles.experienceTileMobileRibbon} text={experience.endDate === "Present" ? "Present" : "Ended"} color={"gray"}>
-            <Card className={styles.experienceTileMobile}>
-                <Title level={1}> {experience.company}  </Title>
-                <Divider />
-                <Title level={4}> {experience.title}  </Title>
-                <Divider />
-                <Title level={5}> {experience.highLevelDescription} </Title>
-                <Divider />
-                <Title level={5}> {experience.startDate} - {experience.endDate} </Title>
-                <Divider />
 
-                <Card className={styles.experienceTileSkillsMobile}>
-                    {experience.skills.map((skill, index) => (<Tag className={"normal-tag"} key={index}>{skill}</Tag>))}
-                </Card>
+        experience.roles.map((role: role, index: number) => {
+            return (
+                <Badge.Ribbon key={index} className={styles.experienceTileMobileRibbon} text={role.endDate === "Present" ? "Present" : "Ended"} color={"gray"}>
+                    <Card className={styles.experienceTileMobile}>
 
-                <Divider />
+                        {<Title level={1}> {experience.companyShortName === "N/A" ? experience.company : experience.companyShortName} </Title>}
+                        {getViewCompanyButton(experience.companyURL)}
+                        <Divider />
+                        <Title level={4}> {role.title}  </Title>
+                        <Divider />
+                        <Title level={5}> {role.highLevelDescription} </Title>
+                        <Divider />
+                        <Title level={5}> {role.startDate} - {role.endDate} </Title>
+                        <Divider />
 
-                <div className={styles.experienceTileDescriptionMobile}>
+                        <Card className={styles.experienceTileSkillsMobile}>
+                            {role.skills.map((skill, index) => (<Tag className={"normal-tag"} key={index}>{skill}</Tag>))}
+                        </Card>
 
-                    {experience.description.map((item: string) => {
-                        return (<> {item} <Divider />  </>)
-                    })}
-                </div>
-                <Text type={"secondary"}> {experience.location} </Text>
+                        <Divider />
 
-            </Card>
-        </Badge.Ribbon>
+                        <div className={styles.experienceTileDescriptionMobile}>
+
+                            {role.description.map((item: string) => {
+                                return (<> {item} <Divider />  </>)
+                            })}
+                        </div>
+                        <Text type={"secondary"}> {role.location} </Text>
+
+                    </Card>
+                </Badge.Ribbon>
+
+            )
+
+        })
+
+
     )
 }
 

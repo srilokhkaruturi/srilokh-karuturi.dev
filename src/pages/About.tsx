@@ -23,7 +23,7 @@ const About: NextPage<AboutProps> = (props) => {
 
   return (
     <Layout>
-      <Layout.Content style={{ textAlign: "center", backgroundColor: "white" }}>
+      <Layout.Content style={{ textAlign: "center", backgroundColor: "#F5F5F5" }}>
         <Avatar size={200} src="/sai.jpeg" />
 
         <div className='Typewriter-Text' style={{ fontSize: "3rem" }}>
