@@ -39,11 +39,11 @@ const Skills: NextPage = () => {
     <div className={styles.skillsWrapper}>
       {skillsData.map((skillData: skill, index: number) => {
         return (
-          <Card className={styles.cardSkill} key={index}>
-            <a href={skillData.url} key={index} target="_blank" rel={"noopener noreferrer"}>
+          <a href={skillData.url} className={styles.skillLink} key={index} target="_blank" rel={"noopener noreferrer"}>
+            <Card className={styles.cardSkill} key={index}>
               <Title level={3} key={index}>{skillData.name}</Title>
-            </a>
-          </Card>
+            </Card>
+          </a>
         )
       })}
     </div>
