@@ -7,6 +7,9 @@
     .cardSkill{
         width: 100% !important;
     }
+    .skillLink {
+        width: 100% !important;
+    }
 }
 
 .skillsWrapper{
@@ -33,5 +36,5 @@
 }
   
 .skillLink {
-    width: 100%;
+    width: fit-content;
 }
