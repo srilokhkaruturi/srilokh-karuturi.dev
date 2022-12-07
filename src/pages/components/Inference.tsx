@@ -18,9 +18,12 @@ const Inference: NextPage<pageProps> = (props: pageProps) => {
 
     // GET DATA AND UPDATE STATES
     useEffect(() => {
+        let ignore = false;
         inquire(inquiryStatement).then(
-            (data) => { data && setAnswer(data.result); })
+            (data) => { !ignore && data && setAnswer(data.result); })
         // .then(() => { setLoading(false) });
+
+        return () => { ignore = true }
     }, [inquiryStatement]);
 
 
