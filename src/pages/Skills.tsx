@@ -2,9 +2,10 @@ import type { NextPage } from 'next'
 import { useEffect, useState } from 'react'
 import styles from '../styles/Skills.module.scss'
 // components
-import { Space, Typography, Row, Card, Divider } from 'antd'
+import { Space, Typography, Row, Card, Divider, Modal } from 'antd'
 const { Text, Title } = Typography
 import SkeletonEverything from './components/SkeletonEverything'
+import Inference from './components/Inference'
 
 type skill = {
   name: string,
@@ -15,10 +16,22 @@ type skillsDataInterface = {
   skills: skill[]
 }
 
+const toInferInitState = {
+
+}
+
 
 const Skills: NextPage = () => {
   const [loading, setLoading] = useState(true)
+  const [infoModal, setInfoModal] = useState(false);
+  const [currentSkill, setCurrentSkill] = useState("")
+  const [modalContentKey, setModalContentKey] = useState(1)
   const [skillsData, setSkillsData] = useState<skill[]>([])
+
+  const toggleModal = () => {
+    setInfoModal(!infoModal)
+    setModalContentKey(modalContentKey + 1)
+  }
 
   // GET DATA AND UPDATE STATES
   useEffect(() => {
@@ -39,13 +52,30 @@ const Skills: NextPage = () => {
     <div className={styles.skillsWrapper}>
       {skillsData.map((skillData: skill, index: number) => {
         return (
-          <a href={skillData.url} className={styles.skillLink} key={index} target="_blank" rel={"noopener noreferrer"}>
+          <a key={index} onClick={() => { toggleModal(); setCurrentSkill(skillData.name) }}>
             <Card className={styles.cardSkill} key={index}>
               <Title level={3} key={index}>{skillData.name}</Title>
             </Card>
           </a>
         )
       })}
+      {
+        infoModal &&
+        <Modal key={modalContentKey} open={infoModal} onCancel={() => { toggleModal(); }} onOk={() => toggleModal()} style={{ "width": "fit-content" }}>
+          {currentSkill}
+          <Inference
+            key={modalContentKey}
+            toInquire={currentSkill} />
+        </Modal>
+      }
+
+
+      {/* <Modal open={infoModal} onCancel={() => { toggleModal(); }} onOk={() => toggleModal()} style={{ "width": "fit-content" }}>
+        {currentSkill}
+        <Inference
+          toInquire={currentSkill} />
+      </Modal> */}
+
     </div>
   )
 }
