@@ -4,7 +4,7 @@
       "Name": "Featured",
       "Projects": [
         {
-          "Name": "Microsoft UTD Decentralized Verifiable Credential",
+          "Name": "Microsoft UTD Decentralized Verifiable Credentials",
           "DescriptionShort": "Implementation of Microsoft's VC in UTD's Authentication",
           "DescriptionLong": "Nothing",
           "Skills": [
@@ -76,7 +76,35 @@
             "GithubURL": "google.com",
             "DevPostURL": "google.com"
           }
-        }
+        },
+        {
+          "Name": "Financial Cents",
+          "DescriptionShort": "Facilitate future generations financial literacy",
+          "DescriptionLong": "Nothing",
+          "Skills": ["Python","Django", "HTML", "CSS"],
+          "URLS": {
+            "PrefURL": "https://devpost.com/software/financial-cents",
+            "DemoURL": "google.com",
+            "VideoURL": "google.com",
+            "ImageURL": "google.com",
+            "GithubURL": "google.com",
+            "DevPostURL": "google.com"
+          }
+        },
+        {
+          "Name": "EOG Resources Analysis & Prediction",
+          "DescriptionShort": "Powerful Data Visualization tool built for mining data",
+          "DescriptionLong": "Nothing",
+          "Skills": ["Python","Django", "HTML", "CSS"],
+          "URLS": {
+            "PrefURL": "https://devpost.com/software/eog-resources-analysis-prediction",
+            "DemoURL": "google.com",
+            "VideoURL": "google.com",
+            "ImageURL": "google.com",
+            "GithubURL": "google.com",
+            "DevPostURL": "google.com"
+          }
+        },
       ]
     }
   ]
