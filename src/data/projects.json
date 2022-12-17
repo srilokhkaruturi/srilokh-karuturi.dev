@@ -81,7 +81,7 @@
           "Name": "Financial Cents",
           "DescriptionShort": "Facilitate future generations financial literacy",
           "DescriptionLong": "Nothing",
-          "Skills": ["Python","Django", "HTML", "CSS"],
+          "Skills": ["Python", "Django", "HTML", "CSS"],
           "URLS": {
             "PrefURL": "https://devpost.com/software/financial-cents",
             "DemoURL": "google.com",
@@ -95,7 +95,7 @@
           "Name": "EOG Resources Analysis & Prediction",
           "DescriptionShort": "Powerful Data Visualization tool built for mining data",
           "DescriptionLong": "Nothing",
-          "Skills": ["Python","Django", "HTML", "CSS"],
+          "Skills": ["Python", "Django", "HTML", "CSS"],
           "URLS": {
             "PrefURL": "https://devpost.com/software/eog-resources-analysis-prediction",
             "DemoURL": "google.com",
@@ -104,7 +104,7 @@
             "GithubURL": "google.com",
             "DevPostURL": "google.com"
           }
-        },
+        }
       ]
     }
   ]
