@@ -45,7 +45,7 @@ const HeaderMain: NextPage = () => {
 
                     <div className={styles.socialsHeader}>
                         <Tooltip key={""} title="LinkedIn" className="headerSocialIcon" > <a href={"https://www.linkedin.com/in/srilokh-karuturi/"}><LinkedinFilled style={{ fontSize: "30px" }} /> </a> </Tooltip>
-                        <Tooltip key={""} title="Github" className="headerSocialIcon"><a href={"https://github.com/sai-k02"} ><GithubFilled style={{ fontSize: "30px" }} /></a></Tooltip>
+                        <Tooltip key={""} title="Github" className="headerSocialIcon"><a href={"https://github.com/srilokhkaruturi"} ><GithubFilled style={{ fontSize: "30px" }} /></a></Tooltip>
                         <Tooltip key={""} title="StackOverflow" className="headerSocialIcon"><a href={"https://stackoverflow.com/users/16441524/sigh"}><BsStackOverflow style={{ fontSize: "30px" }} /></a></Tooltip>
                         <Tooltip key={""} title="Email" className="headerSocialIcon"><a><AiTwotoneMail style={{ fontSize: "30px" }} /> </a> </Tooltip>
                     </div>

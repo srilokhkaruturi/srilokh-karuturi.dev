@@ -1,24 +1,24 @@
 {
-    "contacts":[
-        {
-            "name":"LinkedIn",
-            "link":"https://www.linkedin.com/in/srilokh-karuturi/"
-        },
-        {
-            "name":"GitHub",
-            "link":"https://github.com/sai-k02"
-        },
-        {
-            "name":"Email",
-            "link":"mailto:srilokh.karuturi@gmail.com"
-        },
-        {
-            "name":"StackOverflow",
-            "link":"https://stackoverflow.com/users/16441524/sigh"
-        },
-        {
-            "name":"Devpost",
-            "link":"https://devpost.com/srilokh-karuturi"
-        }
-    ]
+  "contacts": [
+    {
+      "name": "LinkedIn",
+      "link": "https://www.linkedin.com/in/srilokh-karuturi/"
+    },
+    {
+      "name": "GitHub",
+      "link": "https://github.com/srilokhkaruturi"
+    },
+    {
+      "name": "Email",
+      "link": "mailto:srilokh.karuturi@gmail.com"
+    },
+    {
+      "name": "StackOverflow",
+      "link": "https://stackoverflow.com/users/16441524/sigh"
+    },
+    {
+      "name": "Devpost",
+      "link": "https://devpost.com/srilokh-karuturi"
+    }
+  ]
 }
