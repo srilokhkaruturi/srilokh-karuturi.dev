@@ -42,7 +42,7 @@ const Experiences: NextPage = () => {
     const [selection, setSelection] = useState<string>()
     const [experiencesData, setExperiencesData] = useState<experience[]>([])
     const [loading, setLoading] = useState<boolean>(true);
-    const [activeTab, setActiveTab] = useState(true);
+    const [activeTab, setActiveTab] = useState<number>();
 
     // GET DATA AND UPDATE STATES
     useEffect(() => {
@@ -184,7 +184,7 @@ const Experiences: NextPage = () => {
                 <Select
                     dropdownMatchSelectWidth
                     defaultValue={selection}
-                    onChange={(value: {}) => { setSelection((value)) }}
+                    onChange={(value: string) => { setSelection((value)) }}
                     size='large'
                     className={styles.experiencesSelect}
                     options={selectionOptions}
