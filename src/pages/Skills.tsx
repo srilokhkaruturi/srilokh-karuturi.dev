@@ -16,11 +16,6 @@ type skillsDataInterface = {
   skills: skill[]
 }
 
-const toInferInitState = {
-
-}
-
-
 const Skills: NextPage = () => {
   const [loading, setLoading] = useState(true)
   const [infoModal, setInfoModal] = useState(false);
@@ -73,12 +68,6 @@ const Skills: NextPage = () => {
         </Modal>
       }
 
-
-      {/* <Modal open={infoModal} onCancel={() => { toggleModal(); }} onOk={() => toggleModal()} style={{ "width": "fit-content" }}>
-        {currentSkill}
-        <Inference
-          toInquire={currentSkill} />
-      </Modal> */}
 
     </div>
   )

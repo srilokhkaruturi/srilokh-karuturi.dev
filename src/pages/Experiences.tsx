@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import experiencesData from '../data/experiences.json'
 
 import styles from '../styles/Experiences.module.scss'
@@ -7,6 +7,7 @@ import styles from '../styles/Experiences.module.scss'
 // components
 import { Badge, Button, Card, Descriptions, Divider, Row, Select, Space, Tabs, Tag, Timeline, Typography } from 'antd'
 import DescriptionsItem from 'antd/lib/descriptions/Item'
+import SkeletonEverything from './components/SkeletonEverything'
 
 
 const { CheckableTag } = Tag;
@@ -32,11 +33,31 @@ type experience = {
 
 }
 
-const Experiences: NextPage = () => {
-    // DATA
-    const experiences: experience[] = experiencesData.experiences;
+type experiencessDataInterface = {
+    experiences: experience[]
+}
 
-    // DEFINE OPTIONS FOR SELECTION
+const Experiences: NextPage = () => {
+    // STATES
+    const [selection, setSelection] = useState<string>()
+    const [experiencesData, setExperiencesData] = useState<experience[]>([])
+    const [loading, setLoading] = useState<boolean>(true);
+    const [activeTab, setActiveTab] = useState(true);
+
+    // GET DATA AND UPDATE STATES
+    useEffect(() => {
+        getExperiencesData().then(
+            (data: experiencessDataInterface) => { data && setExperiencesData(data.experiences); })
+            .then(() => { setLoading(false) });
+    }, []);
+
+    if (loading) {
+        return (
+            <SkeletonEverything />
+        )
+    }
+
+    // DEFINE OPTIONS FOR SELECTION (MENU OPTIONS)
     const getOptions = (dataExperiences: experience[]) => {
         var returnList: any[] = []
         dataExperiences.forEach((dataExperience: experience, key) => {
@@ -50,10 +71,7 @@ const Experiences: NextPage = () => {
         return returnList
     }
 
-    const selectionOptions: any[] = getOptions(experiences)
-
-    const [activeTab, setActiveTab] = useState(0)
-    const [selection, setSelection] = useState(selectionOptions[0].value)
+    const selectionOptions: any[] = getOptions(experiencesData)
 
     const handleChange = (activeTab: number) => {
         setActiveTab(activeTab)
@@ -66,12 +84,12 @@ const Experiences: NextPage = () => {
             {/* DEFAULT SCREEN */}
 
             <div className={styles.experiencesMenu}>
-                {experiences && experiences.length > 0 && (
+                {experiencesData && experiencesData.length > 0 && (
 
 
                     <Tabs className={styles.experiencesMenuTabs} defaultActiveKey="0" tabPosition='left' onChange={() => handleChange}>
 
-                        {experiences.map((experience, index) => (
+                        {experiencesData.map((experience, index) => (
 
                             <TabPane tab={<Title level={3}>{experience.companyShortName === "N/A" ? experience.company : experience.companyShortName}</Title>} key={index}>
 
@@ -172,7 +190,7 @@ const Experiences: NextPage = () => {
                     options={selectionOptions}
                 />
 
-                {getExperienceTilesMobile(selection, experiences)}
+                {selection && getExperienceTilesMobile(selection, experiencesData)}
 
             </div>
         </>
@@ -242,5 +260,30 @@ const getExperienceTitle = (companyURL: string, company: string, title: string) 
 const getViewCompanyButton = (companyURL: string) => {
     return <a href={companyURL} target={"_blank"} rel={"noopener noreferrer"}><Button className='normal-button'> View Company </Button> </a>
 }
+
+
+// GET DATA OF skills AT PAGE REQUEST
+const getExperiencesData = async () => {
+
+    // REDIRECT
+    var redirectOption: RequestRedirect = "follow"
+
+    // REQUEST OPTIONS
+    var requestOptions = {
+        method: 'GET',
+        redirect: redirectOption
+    };
+
+    // PERFORM GET REQUEST
+    const response = await fetch("/api/getExperiencesData", requestOptions)
+
+
+    // CONVERT RESPONSE INTO JSON
+    const responseObject = await response.json()
+
+    // RETURN JSON OBJECT
+    return responseObject
+}
+
 
 export default Experiences;
