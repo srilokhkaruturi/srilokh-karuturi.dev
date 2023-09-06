@@ -45,7 +45,7 @@ const About: NextPage<AboutProps> = (props) => {
             <Card className='card-about'>
               <Title level={2} style={{ fontWeight: '700' }}> About </Title>
               <Title level={5}>
-                As of now, Sai is working @ IBM as a Software Engineering Intern/Co-op where he creates solutions to drive sales of IBM Software. Due to the nature of his role, he has to use many technologies sometimes within the same day. In one week, he might be working on AI/ML related client work to Full Stack Web Development to Server Installation.
+                Sai was previously a Machine Learning Engineer Intern at IBM Consulting. He applied intelligence to common consulting workflows, leveraging his skills in machine learning to develop innovative solutions.
               </Title>
               <Divider />
               <Title level={5}>
