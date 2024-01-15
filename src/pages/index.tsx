@@ -1,4 +1,4 @@
-import { Layout, Menu, Tabs, Typography, Modal } from 'antd'
+import { Layout, Menu, Tabs, Typography, Modal, notification } from 'antd'
 import type { NextPage } from 'next'
 import { useState, useEffect } from 'react';
 import About from './About';
@@ -7,12 +7,17 @@ import NFTs from './NFTs';
 import Resume from './Resume';
 import HeaderMain from './components/HeaderMain'
 import SkeletonMain from './components/SkeletonMain'
+import type { NotificationPlacement } from 'antd/es/notification/interface';
 import Projects from './Projects';
 import Skills from './Skills';
 import Experiences from './Experiences';
 import Head from 'next/head';
 const { Header, Footer, Sider, Content } = Layout;
+import React, { useMemo } from 'react';
 const { Title, Text } = Typography;
+
+const Context = React.createContext({ name: 'Default' });
+
 const Home: NextPage = () => {
   const [tab, setTab] = useState('About');
 
@@ -55,9 +60,10 @@ const Home: NextPage = () => {
   };
 
   const [content, setContent] = useState(<About key={"about"} onChangeTab={onChangeTab} />);
-  // const [floatingModalOpen, setFloatingModalOpen] = useState(false);
+  const [api, contextHolder] = notification.useNotification();
   const [isLoading, setIsLoading] = useState(true);
   const { TabPane } = Tabs
+
   useEffect(() => {
     // activate loading state when component mounts
     setIsLoading(true);
@@ -67,6 +73,10 @@ const Home: NextPage = () => {
     const timer = setTimeout(() => {
       // disable loading after 5 seconds
       setIsLoading(false);
+      api.info({
+        message: `All data has been put into Redux Store`,
+        placement: 'topRight',
+      });
     }, rand * 1000);
     // Cancel the timer while unmounting
     return () => clearTimeout(timer);
