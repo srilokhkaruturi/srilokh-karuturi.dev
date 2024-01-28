@@ -18,6 +18,13 @@ export default async function getContactsData(req: NextApiRequest, res: NextApiR
     };
     
     
+
+
+
+
+
+
+    
     // Initialize Firebase
     const Firebase = initializeApp(firebaseConfig);
 
