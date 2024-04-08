@@ -19,12 +19,6 @@ export default async function generate(req: NextApiRequest, res: NextApiResponse
         // Send the generated text as the response
         res.status(200).json({ result: completion.data.choices[0].text });
     } catch (error) {
-        if (error.response && error.response.status === 401) {
-            console.error("[server] Authorization failed!");
-            res.status(401).json({ error: "Unauthorized request" });
-        } else {
-            console.error("[server] Error fetching data from OpenAI", error);
-            res.status(500).json({ error: "Internal Server Error" });
-        }
+
     }
 }

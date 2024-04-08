@@ -81,10 +81,10 @@ function getLogo(name: String) {
 
   switch (nameLowerCase) {
     case "linkedin":
-      return <LinkedinFilled />
+      return <LinkedinFilled rev={'default'} />
 
     case "github":
-      return <GithubFilled />
+      return <GithubFilled rev={'default'} />
 
     case "stackoverflow":
       return <BsStackOverflow />

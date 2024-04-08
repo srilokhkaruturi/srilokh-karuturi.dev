@@ -44,7 +44,7 @@ const Projects: NextPage = () => {
       {/* ADD PANELS FOR EACH SECTION IN SECTIONSARRAY */}
       <Collapse defaultActiveKey={["0"]}
         bordered={false}
-        expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
+        expandIcon={({ isActive }) => <CaretRightOutlined rev={'default'} rotate={isActive ? 90 : 0} />}
       >
         {
           SectionsArray && SectionsArray.map(
