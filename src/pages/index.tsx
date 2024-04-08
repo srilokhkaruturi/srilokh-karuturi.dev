@@ -46,12 +46,12 @@ const Home: NextPage = () => {
 
       setContent(<Contact key={""} />)
     }
-    if (key == "Experiences") {
-      setTab(key);
+    // if (key == "Experiences") {
+    //   setTab(key);
 
 
-      setContent(<Experiences key={""} />)
-    }
+    //   setContent(<Experiences key={""} />)
+    // }
     if (key == "NFTs") {
       setTab(key);
 
@@ -102,7 +102,7 @@ const Home: NextPage = () => {
         <Tabs activeKey={tab} defaultActiveKey="About" onChange={onChangeTab} style={{ height: '100%', paddingLeft: "1rem", paddingRight: "1rem" }}  >
           <TabPane tab={<Title level={5}>About</Title>} key="About"> {content} </TabPane>
           <TabPane tab={<Title level={5}>Resume</Title>} key="Resume"> {content} </TabPane>
-          <TabPane tab={<Title level={5}>Experiences</Title>} key="Experiences" > {content} </TabPane>
+          {/* <TabPane tab={<Title level={5}>Experiences</Title>} key="Experiences" > {content} </TabPane> */}
           <TabPane tab={<Title level={5}>Projects</Title>} key="Projects"> {content} </TabPane>
           <TabPane tab={<Title level={5}>NFTs</Title>} key="NFTs" > {content} </TabPane>
           <TabPane tab={<Title level={5}>Skills</Title>} key="Skills" >  {content} </TabPane>

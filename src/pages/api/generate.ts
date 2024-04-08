@@ -1,33 +1,30 @@
-import axios from 'axios';
-import { initializeApp } from 'firebase/app';
-import { collection, doc, getDoc, getFirestore } from 'firebase/firestore';
-import { request } from 'http';
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { Configuration, OpenAIApi } from "openai";
-
-const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
-});
-const openai = new OpenAIApi(configuration);
+import { NextApiRequest, NextApiResponse } from 'next'
+import { Configuration, OpenAIApi } from 'openai';
 
 export default async function generate(req: NextApiRequest, res: NextApiResponse) {
-    console.log("[server] Fetching Info from OpenAI")
+    console.log("[server] Fetching Info from OpenAI");
 
-    const completion = await openai.createCompletion({
-        model: "text-davinci-002",
-        prompt: req.body.toGenerate,
-        // temperature: 0.6,
-        max_tokens: 1000
+    // Initialize the OpenAI API with the new API key method
+    const configuration = new Configuration({
+        apiKey: process.env.OPENAI_API_KEY,
     });
+    const openai = new OpenAIApi(configuration);
 
-    if (completion.status == 401) {
-        console.log("[server] Failed! Fetching info from OpenAI")
+    try {
+        const completion = await openai.createCompletion({
+            model: "gpt-3.5-turbo-instruct", // Updated to the latest available model
+            prompt: req.body.toGenerate
+        });
+
+        // Send the generated text as the response
+        res.status(200).json({ result: completion.data.choices[0].text });
+    } catch (error) {
+        if (error.response && error.response.status === 401) {
+            console.error("[server] Authorization failed!");
+            res.status(401).json({ error: "Unauthorized request" });
+        } else {
+            console.error("[server] Error fetching data from OpenAI", error);
+            res.status(500).json({ error: "Internal Server Error" });
+        }
     }
-
-
-    return res.status(200).json({ result: completion.data.choices[0].text });
-
-
-
-
 }

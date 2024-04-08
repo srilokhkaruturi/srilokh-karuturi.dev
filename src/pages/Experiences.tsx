@@ -51,6 +51,10 @@ const Experiences: NextPage = () => {
             .then(() => { setLoading(false) });
     }, []);
 
+    useEffect(() => {
+        console.log("Selection updated to:", selection);
+    }, [selection]);
+
     if (loading) {
         return (
             <SkeletonEverything />
@@ -67,7 +71,6 @@ const Experiences: NextPage = () => {
                 value: key
             })
         })
-
         return returnList
     }
 
@@ -183,8 +186,7 @@ const Experiences: NextPage = () => {
             <div className={"experiencesMobile"}>
                 <Select
                     dropdownMatchSelectWidth
-                    defaultValue={selection}
-                    onChange={(value: string) => { setSelection((value)) }}
+                    onChange={(value: string) => { setSelection((value)); console.log(selection) }}
                     size='large'
                     className={styles.experiencesSelect}
                     options={selectionOptions}
@@ -199,17 +201,14 @@ const Experiences: NextPage = () => {
 }
 
 const getExperienceTilesMobile = (key: string, dataExperiences: experience[]) => {
-
-    const experience: experience = dataExperiences[Number.parseInt(key)]
-
-
+    const index = parseInt(key, 10);
+    const experience = dataExperiences[index];
     return (
 
         experience.roles.map((role: role, index: number) => {
             return (
                 <Badge.Ribbon key={index} className={styles.experienceTileMobileRibbon} text={role.endDate === "Present" ? "Present" : "Ended"} color={"gray"}>
                     <Card className={styles.experienceTileMobile}>
-
                         {<Title level={1}> {experience.companyShortName === "N/A" ? experience.company : experience.companyShortName} </Title>}
                         {getViewCompanyButton(experience.companyURL)}
                         <Divider />
@@ -236,6 +235,7 @@ const getExperienceTilesMobile = (key: string, dataExperiences: experience[]) =>
 
                     </Card>
                 </Badge.Ribbon>
+
 
             )
 

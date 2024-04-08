@@ -1,88 +1,65 @@
-import type { NextPage } from 'next'
+import { NextPage } from 'next'
 import styles from "../styles/NFTs.module.scss"
 
-import axios from 'axios'
 import { useEffect, useState } from 'react';
-import SkeletonNFTs from './components/SkeletonNFTs'
-import { Image, Space, Card } from 'antd';
+import { Card } from 'antd';
 import FadeIn from 'react-fade-in';
+
 import SkeletonEverything from './components/SkeletonEverything';
 
-type asset = {
+// Define the structure of each NFT item based on the API response
+type NFT = {
+  identifier: string,
   name: string,
-  permalink: string,
-  image_preview_url: string,
+  description: string,
+  opensea_url: string
 }
 
-type API_RESPONSE = {
-  assets: asset[]
+// Define the structure of the API response
+type APIResponse = {
+  nfts: NFT[]
 }
-
 
 const NFTs: NextPage = () => {
   const [loading, setLoading] = useState(true);
-  const [NFTsData, setNFTsData] = useState<asset[]>([]);
+  const [nftsData, setNftsData] = useState<NFT[]>([]);
+
   useEffect(() => {
+    const getNFTsData = async () => {
+      try {
+        const response = await fetch("/api/getNFTData");
+        const data: APIResponse = await response.json();
+        setNftsData(data.nfts);
+      } catch (error) {
+        console.error("Failed to fetch NFT data:", error);
+      }
+      setLoading(false);
+    };
 
-    getNFTsData().then(
-      (response: API_RESPONSE) => {
-        //@ts-ignore
-        if (response) {
-          setNFTsData(response.assets)
-        }
-      })
-
-      .then(() => {
-        setLoading(false)
-      });
-
-
+    getNFTsData();
   }, []);
 
   if (loading) {
-    return (<SkeletonEverything />)
+    return <SkeletonEverything />;
   }
+
   return (
-    <>
-      <FadeIn>
-        <div className={styles.nftCardWrapper}>
-
-          {NFTsData && NFTsData.map((NFTs: asset, index: number) => {
-            return (
-              <Card
-                // className={"nftCard" + index}
-                className={styles.nftCard}
-                hoverable
-                key={index}
-                // style={{ width: 250, height: 375, backgroundColor: "#e2ded7", marginBottom: "24px" }}
-                cover={<Image key={index} src={NFTs.image_preview_url} alt={"..."} style={{ width: 250, height: 250 }} />}
-              >
-                <Card.Meta key={index} title={<a href={NFTs.permalink} target="_blank" rel={"noopener noreferrer"}> View on OpenSea </a>} description={NFTs.name} />
-              </Card>
-
-            )
-          }
-          )}
-
-        </div>
-
-      </FadeIn>
-    </>
-
-  )
-}
-
-const getNFTsData = async () => {
-  var redirectOption: RequestRedirect = "follow"
-
-  var requestOptions = {
-    method: 'GET',
-    redirect: redirectOption
-  };
-
-  const response = await fetch("/api/getNFTData", requestOptions)
-  const responseObject = await response.json()
-  return responseObject
+    <FadeIn>
+      <div className={styles.nftCardWrapper}>
+        {nftsData.map((nft, index) => (
+          <Card
+            className={styles.nftCard}
+            hoverable
+            key={nft.identifier}
+          >
+            <Card.Meta
+              title={<a href={nft.opensea_url} target="_blank" rel="noopener noreferrer">{nft.name}</a>}
+            />
+          </Card>
+        ))}
+      </div>
+    </FadeIn>
+  );
 }
 
 export default NFTs;

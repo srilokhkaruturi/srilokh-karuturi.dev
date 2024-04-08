@@ -40,7 +40,7 @@ const HeaderMain: NextPage = () => {
                 <div className={styles.headerMain}>
                     <div className={styles.headerTitle}>
                         <text className={styles.titleText}> Srilokh Karuturi </text>
-                        <a className={styles.titleCurrentRole} type={"secondary"}>Software Engineering Intern</a>
+                        <a className={styles.titleCurrentRole} type={"secondary"}>Software Engineer</a>
                     </div>
 
                     <div className={styles.socialsHeader}>
