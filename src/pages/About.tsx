@@ -60,10 +60,10 @@ const About: NextPage<AboutProps> = (props) => {
               <Title level={3} className='directory-text'> Skills </Title>
               <Text type='secondary'> Collection of skills  </Text>
             </Card>
-            <Card className='card-directory' onClick={() => onChangeTab("NFTs")}>
+            {/* <Card className='card-directory' onClick={() => onChangeTab("NFTs")}>
               <Title level={3} className='directory-text'> NFTs </Title>
               <Text type='secondary'> Showcase of personal NFTs </Text>
-            </Card>
+            </Card> */}
             <Card className='card-directory' onClick={() => onChangeTab("Contact")}>
               <Title level={3} className='directory-text'> Contact </Title>
               <Text type='secondary'> Contact Info  </Text>
